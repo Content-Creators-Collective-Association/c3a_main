@@ -10,21 +10,21 @@ function CreatorFit() {
                         </p>
                         <div className="space-y-8">
                             <div className="flex gap-4">
-                                <span className="material-symbols-outlined text-saffron">check_circle</span>
+                                <span className="material-symbols-outlined text-blue-600">check_circle</span>
                                 <div>
                                     <p className="font-bold text-lg">Selective Entry</p>
-                                    <p className="text-white/50 text-sm">Minimum 1k+ active followers on primary social channels.</p>
+                                    <p className="text-white/50 text-sm">Minimum 500+ active followers on primary social channels.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
-                                <span className="material-symbols-outlined text-saffron">check_circle</span>
+                                <span className="material-symbols-outlined text-blue-600">check_circle</span>
                                 <div>
                                     <p className="font-bold text-lg">Original Voice</p>
                                     <p className="text-white/50 text-sm">Creators who produce unique content with high production value.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
-                                <span className="material-symbols-outlined text-saffron">check_circle</span>
+                                <span className="material-symbols-outlined text-blue-600">check_circle</span>
                                 <div>
                                     <p className="font-bold text-lg">Consistent Growth</p>
                                     <p className="text-white/50 text-sm">A track record of positive audience sentiment and organic growth.</p>
@@ -37,7 +37,7 @@ function CreatorFit() {
                         <div className="space-y-6">
                             <div className="flex items-center justify-between py-4 border-b border-white/10">
                                 <span className="text-white/70">Minimum Following</span>
-                                <span className="font-bold">1k+</span>
+                                <span className="font-bold">500+</span>
                             </div>
                             <div className="flex items-center justify-between py-4 border-b border-white/10">
                                 <span className="text-white/70">Engagement Rate</span>
@@ -49,7 +49,7 @@ function CreatorFit() {
                             </div>
                             <div className="flex items-center justify-between py-4">
                                 <span className="text-white/70">Application Status</span>
-                                <span className="text-saffron font-bold">Now Open</span>
+                                <span className="text-blue-600 font-bold">Now Open</span>
                             </div>
                         </div>
                     </div>

@@ -7,10 +7,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                saffron: "#FF9933",
+                saffron: "#2563EB",
                 "india-green": "#138808",
-                sand: "#F9F7F2",
-                charcoal: "#2D2D2D",
+                sand: "#FFFFFF",
+                charcoal: "#1F2937",
             },
             fontFamily: {
                 sans: ['Manrope', 'sans-serif'],

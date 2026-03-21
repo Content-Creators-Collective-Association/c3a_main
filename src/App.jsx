@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import TrustSection from './components/TrustSection';
+import AboutUs from './components/AboutUs';
 import ValueProps from './components/ValueProps';
 import CreatorFit from './components/CreatorFit';
 import HowItWorks from './components/HowItWorks';
 import CreatorForm from './components/CreatorForm';
+import MembershipSubscription from './components/MembershipSubscription';
 import Footer from './components/Footer';
 
 function App() {
@@ -38,11 +39,12 @@ function App() {
             <Header />
             <main>
                 <Hero />
-                <TrustSection />
+                <AboutUs />
                 <ValueProps />
                 <CreatorFit />
                 <HowItWorks />
                 <CreatorForm />
+                <MembershipSubscription />
             </main>
             <Footer />
         </>

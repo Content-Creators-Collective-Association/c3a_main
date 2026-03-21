@@ -6,8 +6,9 @@ function CreatorForm() {
         name: '',
         email: '',
         platform: 'Instagram',
-        followerRange: '1k - 10k',
-        profileUrl: ''
+        followerRange: '500 - 1k',
+        profileUrl: '',
+        termsAccepted: false
     });
 
     // Validation errors
@@ -56,6 +57,11 @@ function CreatorForm() {
             newErrors.profileUrl = 'Please enter a valid URL (must start with http:// or https://)';
         }
 
+        // Terms validation
+        if (!formData.termsAccepted) {
+            newErrors.termsAccepted = 'You must accept the Terms and Conditions';
+        }
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -96,6 +102,7 @@ function CreatorForm() {
     const isFormValid = formData.name.trim() &&
         formData.email.trim() &&
         formData.profileUrl.trim() &&
+        formData.termsAccepted &&
         Object.keys(errors).length === 0;
 
     return (
@@ -129,7 +136,7 @@ function CreatorForm() {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className={`w-full bg-sand/30 border ${errors.name ? 'border-red-400' : 'border-charcoal/10'} rounded-2xl px-6 py-4 focus:ring-1 focus:ring-saffron focus:border-saffron outline-none transition-all placeholder:text-charcoal/20`}
+                                        className={`w-full bg-sand/30 border ${errors.name ? 'border-red-400' : 'border-charcoal/10'} rounded-2xl px-6 py-4 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all placeholder:text-charcoal/20`}
                                         placeholder="Enter your name"
                                     />
                                     {errors.name && <p className="text-red-500 text-xs ml-1">{errors.name}</p>}
@@ -143,7 +150,7 @@ function CreatorForm() {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className={`w-full bg-sand/30 border ${errors.email ? 'border-red-400' : 'border-charcoal/10'} rounded-2xl px-6 py-4 focus:ring-1 focus:ring-saffron focus:border-saffron outline-none transition-all placeholder:text-charcoal/20`}
+                                        className={`w-full bg-sand/30 border ${errors.email ? 'border-red-400' : 'border-charcoal/10'} rounded-2xl px-6 py-4 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all placeholder:text-charcoal/20`}
                                         placeholder="hello@creator.com"
                                     />
                                     {errors.email && <p className="text-red-500 text-xs ml-1">{errors.email}</p>}
@@ -178,6 +185,7 @@ function CreatorForm() {
                                         onChange={handleChange}
                                         className="w-full bg-sand/30 border-charcoal/10 rounded-2xl px-6 py-4 focus:ring-1 focus:ring-saffron outline-none transition-all appearance-none cursor-pointer"
                                     >
+                                        <option>500 - 1k</option>
                                         <option>1k - 10k</option>
                                         <option>10k - 50k</option>
                                         <option>50k - 250k</option>
@@ -195,10 +203,31 @@ function CreatorForm() {
                                     name="profileUrl"
                                     value={formData.profileUrl}
                                     onChange={handleChange}
-                                    className={`w-full bg-sand/30 border ${errors.profileUrl ? 'border-red-400' : 'border-charcoal/10'} rounded-2xl px-6 py-4 focus:ring-1 focus:ring-saffron focus:border-saffron outline-none transition-all placeholder:text-charcoal/20`}
+                                    className={`w-full bg-sand/30 border ${errors.profileUrl ? 'border-red-400' : 'border-charcoal/10'} rounded-2xl px-6 py-4 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all placeholder:text-charcoal/20`}
                                     placeholder="https://social.com/yourprofile"
                                 />
                                 {errors.profileUrl && <p className="text-red-500 text-xs ml-1">{errors.profileUrl}</p>}
+                            </div>
+                            <div className="space-y-4 p-6 bg-sand/30 rounded-2xl border border-charcoal/10">
+                                <div className="flex gap-3">
+                                    <input
+                                        type="checkbox"
+                                        id="terms"
+                                        name="termsAccepted"
+                                        checked={formData.termsAccepted}
+                                        onChange={handleChange}
+                                        className={`w-5 h-5 rounded border-2 ${errors.termsAccepted ? 'border-red-400' : 'border-charcoal/20'} cursor-pointer accent-saffron mt-0.5 flex-shrink-0`}
+                                    />
+                                    <label htmlFor="terms" className="cursor-pointer">
+                                        <p className="text-sm text-charcoal font-semibold mb-2">
+                                            I agree to the Terms and Conditions
+                                        </p>
+                                        <p className="text-xs text-charcoal/60 leading-relaxed">
+                                            By joining C3A, members commit to maintaining professional standards and creating authentic content. Members must not engage in or post negative, defamatory, or harmful content that could damage brand reputations or community trust. Violations may result in membership suspension or termination.
+                                        </p>
+                                    </label>
+                                </div>
+                                {errors.termsAccepted && <p className="text-red-500 text-xs ml-8">{errors.termsAccepted}</p>}
                             </div>
                             <button
                                 type="submit"

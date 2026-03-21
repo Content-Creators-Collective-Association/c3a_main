@@ -10,7 +10,7 @@ function Hero() {
     return (
         <section className="relative pt-24 pb-32 overflow-hidden">
             <div className="max-w-5xl mx-auto px-6 text-center">
-                <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white text-charcoal/60 text-xs font-bold tracking-widest uppercase mb-8 border border-orange-100">
+                <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white text-charcoal/60 text-xs font-bold tracking-widest uppercase mb-8 border border-blue-100">
                     Empowering the Creator Economy
                 </span>
                 <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] text-charcoal">
@@ -22,7 +22,7 @@ function Hero() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
                     <a
-                        className="w-full sm:w-auto px-10 py-5 bg-saffron text-white font-bold rounded-full text-lg hover:bg-orange-600 transition-all shadow-lg shadow-orange-200/40 flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full sm:w-auto px-10 py-5 bg-saffron text-white font-bold rounded-full text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-200/40 flex items-center justify-center gap-2 cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#apply')}
                     >
                         Apply to Join <span className="material-symbols-outlined">arrow_forward</span>
