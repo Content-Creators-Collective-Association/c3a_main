@@ -1,4 +1,31 @@
 function AboutUs() {
+    const founders = [
+        {
+            name: 'Arya Pandey',
+            role: 'Co-Founder & CEO',
+            image: 'https://i.pravatar.cc/300?img=12',
+            bio: 'Arya previously led creator partnerships across multiple digital agencies and has spent 8+ years building systems that help creators scale sustainable businesses.'
+        },
+        {
+            name: 'Shubhankar Pandey',
+            role: 'Co-Founder & Head of Growth',
+            image: 'https://i.pravatar.cc/300?img=47',
+            bio: 'Shubhankar is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
+        },
+        {
+            name: 'Pavan Kumar',
+            role: 'Co-Founder & Head of Growth',
+            image: 'https://i.pravatar.cc/300?img=47',
+            bio: 'Pavan is a growth strategist focused on audience development, brand positioning, and creator monetization. She has mentored hundreds of emerging creators.'
+        },
+        {
+            name: 'Shiv Kumar',
+            role: 'Co-Founder & Head of Growth',
+            image: 'https://i.pravatar.cc/300?img=47',
+            bio: 'Shiv is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
+        }
+    ];
+
     return (
         <section className="py-24 fade-in-section" id="about">
             <div className="max-w-5xl mx-auto px-6">
@@ -62,6 +89,35 @@ function AboutUs() {
                                 Connect with fellow creators, share insights, and collaborate on projects within our thriving community.
                             </p>
                         </div>
+                    </div>
+                </div>
+
+                <div className="mt-20 pt-20 border-t border-charcoal/5">
+                    <div className="text-center mb-12">
+                        <h3 className="text-3xl font-extrabold text-charcoal mb-4">Meet the Founders</h3>
+                        <p className="text-charcoal/60 max-w-2xl mx-auto">
+                            C3A is led by a team deeply rooted in the creator economy, with a shared mission to build fair and growth-focused opportunities for creators.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {founders.map((founder) => (
+                            <article key={founder.name} className="bg-white border border-charcoal/5 rounded-3xl p-8 shadow-sm">
+                                <div className="flex flex-col sm:flex-row gap-6 items-start">
+                                    <img
+                                        src={founder.image}
+                                        alt={founder.name}
+                                        className="w-24 h-24 rounded-2xl object-cover border border-charcoal/10"
+                                        loading="lazy"
+                                    />
+                                    <div>
+                                        <h4 className="text-2xl font-extrabold text-charcoal mb-1">{founder.name}</h4>
+                                        <p className="text-blue-600 font-semibold mb-4">{founder.role}</p>
+                                        <p className="text-charcoal/70 leading-relaxed">{founder.bio}</p>
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
                     </div>
                 </div>
             </div>

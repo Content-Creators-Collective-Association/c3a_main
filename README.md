@@ -35,3 +35,18 @@ HTML: 0.96 KB
 CSS: 21.41 KB (gzipped: 4.90 KB)
 JS: 164.70 KB (gzipped: 51.82 KB)
 This is an excellent bundle size for a production-ready landing page! 🚀
+
+Supabase Form Integration
+1. Copy [.env.example](.env.example) to `.env.local`.
+2. Add your Supabase values:
+	- `VITE_SUPABASE_URL`
+	- `VITE_SUPABASE_ANON_KEY`
+	- `VITE_SUPABASE_TABLE` (optional, defaults to `creator_applications`)
+3. In Supabase, create a table (default: `creator_applications`) with columns:
+	- `name` (text)
+	- `email` (text)
+	- `platform` (text)
+	- `follower_range` (text)
+	- `profile_url` (text)
+	- `terms_accepted` (boolean)
+4. Enable insert access with an RLS policy for your chosen usage pattern.
