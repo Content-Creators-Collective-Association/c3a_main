@@ -28,8 +28,15 @@ export async function handleSubmit(event) {
     const { error } = await insertCreatorProfile(payload);
 
     if (error) {
-        console.error('Failed to insert creator profile:', error);
-        alert('Submission failed. Please try again.');
+        console.error('Supabase insert error:', {
+            message: error.message,
+            code: error.code,
+            details: error.details,
+            hint: error.hint,
+            fullError: error
+        });
+        console.log('Payload sent:', payload);
+        alert(`Submission failed: ${error.message}`);
         return { success: false, error };
     }
 
