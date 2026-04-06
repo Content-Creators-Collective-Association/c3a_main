@@ -23,16 +23,16 @@ function HowItWorks() {
                     </div>
                     <div>
                         <div className="text-saffron font-extrabold text-5xl mb-6 opacity-20">03</div>
-                        <h4 className="text-xl font-extrabold mb-3">Strategy</h4>
+                        <h4 className="text-xl font-extrabold mb-3">Selection</h4>
                         <p className="text-charcoal/60 leading-relaxed text-sm">
-                            Collaborate with our experts on a tailored growth and monetization plan.
+                            Creators undergo filtering and checks to ensure alignment with our community values and standards.
                         </p>
                     </div>
                     <div>
                         <div className="text-saffron font-extrabold text-5xl mb-6 opacity-20">04</div>
                         <h4 className="text-xl font-extrabold mb-3">Growth</h4>
                         <p className="text-charcoal/60 leading-relaxed text-sm">
-                            Gain access to exclusive campaigns and high-value partnerships.
+                            Gain access to exclusive campaigns and high-value partnerships along with support from our creator success team.
                         </p>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ function AboutUs() {
     const founders = [
         {
             name: 'Pavan Kumar',
-            role: 'Director',
+            role: 'Managing Director',
             image: 'https://i.pravatar.cc/300?img=12',
             bio: 'Pavan previously led creator partnerships across multiple digital agencies and has spent 8+ years building systems that help creators scale sustainable businesses.'
         },
@@ -14,19 +14,25 @@ function AboutUs() {
         },
         {
             name: 'Arya Pandey',
-            role: 'Co-Founder & Head of Growth',
+            role: 'Technical Head',
             image: 'https://i.pravatar.cc/300?img=47',
             bio: 'Arya is a growth strategist focused on audience development, brand positioning, and creator monetization. She has mentored hundreds of emerging creators.'
         },
         {
+            name: 'Shubham Pandey',
+            role: 'Legal Head',
+            image: 'https://i.pravatar.cc/300?img=47',
+            bio: 'Shubham is a legal expert with a focus on creator rights and compliance. He has helped numerous creators navigate the legal aspects of their careers.'
+        },
+        {
             name: 'Shiv Kumar',
-            role: 'Co-Founder & Head of Growth',
+            role: 'Marketing Lead',
             image: 'https://i.pravatar.cc/300?img=47',
             bio: 'Shiv is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
         },
         {
             name: 'Sonu Kumar Dubey',
-            role: 'Co-Founder & Head of Growth',
+            role: 'Operations Lead',
             image: 'https://i.pravatar.cc/300?img=47',
             bio: 'Sonu is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
         }
@@ -40,7 +46,7 @@ function AboutUs() {
                         <h2 className="text-4xl font-extrabold mb-6 text-charcoal">About C3A</h2>
                         <div className="space-y-6 text-charcoal/70 leading-relaxed">
                             <p>
-                                C3A stands for Content Creators Collective Association - a platform built by creators, for creators. We are not an outside agency looking in; we are people from the creator journey building the support system we wished we had.
+                                C3A® stands for Content Creators Collective Association - a platform built by creators, for creators. We are not an outside agency looking in; we are people from the creator journey building the support system we wished we had.
                             </p>
                             <p>
                                 We were founded on one belief: creators grow faster when they grow together. C3A exists to give creators a home where knowledge is shared openly, wins are celebrated together, and opportunities are distributed fairly.

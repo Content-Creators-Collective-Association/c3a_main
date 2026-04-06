@@ -187,7 +187,7 @@ function CreatorForm() {
                                 )}
                             </button>
                             <p className="text-center text-[10px] text-charcoal/40 font-bold mt-6 leading-relaxed">
-                                OUR TEAM REVIEWS ALL SUBMISSIONS WITHIN 5 BUSINESS DAYS.
+                                OUR TEAM WILL REVIEW YOUR APPLICATION AND REACH OUT TO YOU.
                             </p>
                         </form>
                     )}

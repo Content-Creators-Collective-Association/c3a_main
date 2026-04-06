@@ -18,7 +18,7 @@ function Hero() {
                     <span className="text-saffron">Creative Journey</span>
                 </h1>
                 <p className="text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto mb-12 leading-relaxed">
-                    The premier platform for verified creators to unlock professional growth. Connect with global opportunities and professionalize your influence.
+                    The premier platform for C3A® verified creators to unlock professional growth. Connect with India-centric opportunities and professionalize your influence.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
                     <a
