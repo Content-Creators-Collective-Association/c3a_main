@@ -24,12 +24,6 @@ function Header() {
                         About Us
                     </a>
                     <a
-                        className="text-sm font-semibold text-charcoal/70 hover:text-blue-600 transition-colors cursor-pointer"
-                        onClick={(e) => handleSmoothScroll(e, '#benefits')}
-                    >
-                        Opportunities
-                    </a>
-                    <a
                         className="text-sm font-semibold text-charcoal/70 hover:text-saffron transition-colors cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
                     >

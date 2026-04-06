@@ -1,10 +1,10 @@
 function AboutUs() {
     const founders = [
         {
-            name: 'Arya Pandey',
-            role: 'Co-Founder & CEO',
+            name: 'Pavan Kumar',
+            role: 'Director',
             image: 'https://i.pravatar.cc/300?img=12',
-            bio: 'Arya previously led creator partnerships across multiple digital agencies and has spent 8+ years building systems that help creators scale sustainable businesses.'
+            bio: 'Pavan previously led creator partnerships across multiple digital agencies and has spent 8+ years building systems that help creators scale sustainable businesses.'
         },
         {
             name: 'Shubhankar Pandey',
@@ -13,16 +13,22 @@ function AboutUs() {
             bio: 'Shubhankar is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
         },
         {
-            name: 'Pavan Kumar',
+            name: 'Arya Pandey',
             role: 'Co-Founder & Head of Growth',
             image: 'https://i.pravatar.cc/300?img=47',
-            bio: 'Pavan is a growth strategist focused on audience development, brand positioning, and creator monetization. She has mentored hundreds of emerging creators.'
+            bio: 'Arya is a growth strategist focused on audience development, brand positioning, and creator monetization. She has mentored hundreds of emerging creators.'
         },
         {
             name: 'Shiv Kumar',
             role: 'Co-Founder & Head of Growth',
             image: 'https://i.pravatar.cc/300?img=47',
             bio: 'Shiv is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
+        },
+        {
+            name: 'Sonu Kumar Dubey',
+            role: 'Co-Founder & Head of Growth',
+            image: 'https://i.pravatar.cc/300?img=47',
+            bio: 'Sonu is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
         }
     ];
 
@@ -34,13 +40,13 @@ function AboutUs() {
                         <h2 className="text-4xl font-extrabold mb-6 text-charcoal">About C3A</h2>
                         <div className="space-y-6 text-charcoal/70 leading-relaxed">
                             <p>
-                                C3A stands for Content Creators Collective Association — a community-driven platform that bridges the gap between talented creators and global brands seeking authentic partnerships.
+                                C3A stands for Content Creators Collective Association - a platform built by creators, for creators. We are not an outside agency looking in; we are people from the creator journey building the support system we wished we had.
                             </p>
                             <p>
-                                We were founded with a simple belief: that the creator economy thrives when creators are equipped with the right tools, network, and opportunities to turn their passion into a sustainable profession.
+                                We were founded on one belief: creators grow faster when they grow together. C3A exists to give creators a home where knowledge is shared openly, wins are celebrated together, and opportunities are distributed fairly.
                             </p>
                             <p>
-                                Too many creators struggle in isolation, lacking access to premium opportunities and professional development. At the same time, brands search endlessly for authentic voices. We created C3A to solve this disconnect.
+                                Too many creators build alone and burn out in silence. At C3A, you are part of a collective that understands your challenges, values your voice, and helps you build a long-term career with dignity.
                             </p>
                         </div>
                     </div>
@@ -48,20 +54,20 @@ function AboutUs() {
                         <div className="p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100/50 border border-blue-200">
                             <h3 className="text-2xl font-extrabold mb-4 text-charcoal">Our Mission</h3>
                             <p className="text-charcoal/70">
-                                To empower creators worldwide by providing exclusive access to premium partnerships, professional development, and a thriving community of like-minded individuals.
+                                To build the most trusted creator-first ecosystem where every member feels seen, supported, and connected to real growth opportunities.
                             </p>
                         </div>
                         <div className="p-10 rounded-3xl bg-gradient-to-br from-blue-50/50 to-white border border-charcoal/5">
                             <h3 className="text-2xl font-extrabold mb-4 text-charcoal">Why We Exist</h3>
                             <p className="text-charcoal/70">
-                                The creator economy is growing exponentially, but many talented creators lack the platform and recognition they deserve. We exist to level the playing field and create meaningful opportunities for every creator, regardless of their current follower count.
+                                Because creators deserve more than transactions. They deserve a community that backs them, mentors that guide them, and a platform where they belong regardless of where they are in their journey.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div className="mt-20 pt-20 border-t border-charcoal/5">
                     <h3 className="text-3xl font-extrabold mb-12 text-center text-charcoal">What We Offer</h3>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="text-center">
                             <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
                                 <span className="material-symbols-outlined text-3xl text-blue-600">handshake</span>
@@ -87,6 +93,51 @@ function AboutUs() {
                             <h4 className="text-lg font-bold mb-3 text-charcoal">Community Support</h4>
                             <p className="text-charcoal/60">
                                 Connect with fellow creators, share insights, and collaborate on projects within our thriving community.
+                            </p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                                <span className="material-symbols-outlined text-3xl text-blue-600">gavel</span>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-charcoal">Legal Help Team</h4>
+                            <p className="text-charcoal/60">
+                                Get creator-focused guidance on contracts, usage rights, brand terms, and dispute support from our legal help team.
+                            </p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                                <span className="material-symbols-outlined text-3xl text-blue-600">map</span>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-charcoal">Regional Creators Directory</h4>
+                            <p className="text-charcoal/60">
+                                Discover and collaborate with impact creators by language and region through our curated regional creators directory.
+                            </p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                                <span className="material-symbols-outlined text-3xl text-blue-600">campaign</span>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-charcoal">Campaign Production Support</h4>
+                            <p className="text-charcoal/60">
+                                End-to-end assistance for planning, scripting, and delivering creator-brand campaigns with stronger storytelling and impact.
+                            </p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                                <span className="material-symbols-outlined text-3xl text-blue-600">payments</span>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-charcoal">Revenue & Tax Guidance</h4>
+                            <p className="text-charcoal/60">
+                                Practical guidance on invoicing, payment workflows, and creator income basics so you can grow with financial clarity.
+                            </p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                                <span className="material-symbols-outlined text-3xl text-blue-600">diversity_3</span>
+                            </div>
+                            <h4 className="text-lg font-bold mb-3 text-charcoal">Collaboration Circles</h4>
+                            <p className="text-charcoal/60">
+                                Curated peer groups where creators co-create, exchange feedback, and launch mission-aligned projects together.
                             </p>
                         </div>
                     </div>

@@ -1,15 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
-import ValueProps from './components/ValueProps';
 import CreatorFit from './components/CreatorFit';
 import HowItWorks from './components/HowItWorks';
 import CreatorForm from './components/CreatorForm';
 import MembershipSubscription from './components/MembershipSubscription';
+import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
+import LanguagePrompt, { LANGUAGE_STORAGE_KEY } from './components/LanguagePrompt';
 
 function App() {
+    const [showLanguagePrompt, setShowLanguagePrompt] = useState(false);
+
     // IntersectionObserver for scroll-based animations
     useEffect(() => {
         const observerOptions = {
@@ -34,17 +37,30 @@ function App() {
         };
     }, []);
 
+    useEffect(() => {
+        const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+        if (savedLanguage) {
+            document.documentElement.lang = savedLanguage;
+            return;
+        }
+
+        setShowLanguagePrompt(true);
+    }, []);
+
     return (
         <>
+            {showLanguagePrompt && (
+                <LanguagePrompt onConfirm={() => setShowLanguagePrompt(false)} />
+            )}
             <Header />
             <main>
                 <Hero />
                 <AboutUs />
-                <ValueProps />
                 <CreatorFit />
                 <HowItWorks />
                 <CreatorForm />
                 <MembershipSubscription />
+                <FAQSection />
             </main>
             <Footer />
         </>

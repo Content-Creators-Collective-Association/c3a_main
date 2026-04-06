@@ -5,6 +5,7 @@ function MembershipSubscription() {
             price: '₹10',
             period: '/month',
             description: 'Perfect for emerging creators just starting their journey',
+            eligibility: 'Open to all eligible creators',
             features: [
                 'Access to C3A community',
                 'Monthly brand opportunity alerts',
@@ -20,6 +21,7 @@ function MembershipSubscription() {
             price: '₹60',
             period: '/month',
             description: 'For growing creators looking to scale their impact',
+            eligibility: 'Requires 3 months of active Starter membership',
             features: [
                 'Everything in Starter',
                 'Priority brand partnership access',
@@ -38,6 +40,7 @@ function MembershipSubscription() {
             price: '₹120',
             period: '/month',
             description: 'For established creators maximizing their growth potential',
+            eligibility: 'Requires 6 months of active Starter membership',
             features: [
                 'Everything in Professional',
                 'Dedicated account manager',
@@ -88,6 +91,9 @@ function MembershipSubscription() {
                                 <div className="mb-8">
                                     <h3 className="text-2xl font-extrabold text-charcoal mb-2">{plan.name}</h3>
                                     <p className="text-charcoal/60 text-sm mb-6">{plan.description}</p>
+                                    <p className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-100 rounded-xl px-3 py-2 mb-6">
+                                        {plan.eligibility}
+                                    </p>
                                     <div className="flex items-baseline gap-1">
                                         <span className="text-4xl font-extrabold text-charcoal">{plan.price}</span>
                                         <span className="text-charcoal/60">{plan.period}</span>
@@ -122,28 +128,20 @@ function MembershipSubscription() {
                     ))}
                 </div>
 
-                <div className="mt-20 pt-20 border-t border-charcoal/5">
-                    <div className="bg-gradient-to-r from-blue-50 to-blue-50/50 rounded-3xl p-12 text-center">
-                        <h3 className="text-2xl font-extrabold mb-4 text-charcoal">
-                            Flexible Payment Options
-                        </h3>
-                        <p className="text-charcoal/60 mb-8 max-w-2xl mx-auto">
-                            All plans support monthly and annual billing. Save 20% with annual subscriptions. Cancel anytime with no penalties.
-                        </p>
-                        <div className="flex flex-col md:flex-row gap-12 justify-center">
-                            <div>
-                                <p className="text-sm text-charcoal/50 mb-2">Money-Back Guarantee</p>
-                                <p className="font-bold text-lg text-charcoal">30 Days</p>
-                            </div>
-                            <div>
-                                <p className="text-sm text-charcoal/50 mb-2">Payment Methods</p>
-                                <p className="font-bold text-lg text-charcoal">Cards, UPI, Bank Transfer</p>
-                            </div>
-                            <div>
-                                <p className="text-sm text-charcoal/50 mb-2">Support</p>
-                                <p className="font-bold text-lg text-charcoal">24/7 Available</p>
-                            </div>
+                <div className="mt-16 rounded-3xl border border-charcoal/10 bg-gradient-to-r from-charcoal to-charcoal/90 p-8 md:p-10 text-white">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                        <div>
+                            <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-blue-200 mb-3">
+                                Coming Soon
+                            </p>
+                            <h3 className="text-2xl md:text-3xl font-extrabold mb-3">Official C3A Branded Merch</h3>
+                            <p className="text-white/75 max-w-2xl">
+                                Limited-edition creator merchandise designed for community pride and on-ground events. Early access will be offered to active members.
+                            </p>
                         </div>
+                        <span className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-bold text-white/90 w-fit">
+                            Drops Announced Soon
+                        </span>
                     </div>
                 </div>
             </div>

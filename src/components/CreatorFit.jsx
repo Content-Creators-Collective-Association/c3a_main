@@ -6,28 +6,28 @@ function CreatorFit() {
                     <div>
                         <h2 className="text-4xl font-extrabold mb-8">Who We Partner With</h2>
                         <p className="text-white/60 text-lg mb-12">
-                            We value quality and engagement over raw numbers. Our community is built on authenticity and professional potential.
+                            We partner with creators who inspire change, amplify important voices, and use content to create meaningful social good.
                         </p>
                         <div className="space-y-8">
                             <div className="flex gap-4">
                                 <span className="material-symbols-outlined text-blue-600">check_circle</span>
                                 <div>
-                                    <p className="font-bold text-lg">Selective Entry</p>
-                                    <p className="text-white/50 text-sm">Minimum 500+ active followers on primary social channels.</p>
+                                    <p className="font-bold text-lg">Purpose-Driven Storytelling</p>
+                                    <p className="text-white/50 text-sm">Creators whose work educates, uplifts, and motivates communities toward positive action.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <span className="material-symbols-outlined text-blue-600">check_circle</span>
                                 <div>
                                     <p className="font-bold text-lg">Original Voice</p>
-                                    <p className="text-white/50 text-sm">Creators who produce unique content with high production value.</p>
+                                    <p className="text-white/50 text-sm">Creators who communicate authentically and represent their values with honesty and consistency.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <span className="material-symbols-outlined text-blue-600">check_circle</span>
                                 <div>
-                                    <p className="font-bold text-lg">Consistent Growth</p>
-                                    <p className="text-white/50 text-sm">A track record of positive audience sentiment and organic growth.</p>
+                                    <p className="font-bold text-lg">Community Leadership</p>
+                                    <p className="text-white/50 text-sm">Creators who foster respectful conversations and contribute to a safe, inclusive creator ecosystem.</p>
                                 </div>
                             </div>
                         </div>
@@ -36,20 +36,20 @@ function CreatorFit() {
                         <h3 className="text-2xl font-bold mb-8 opacity-80">Our Criteria</h3>
                         <div className="space-y-6">
                             <div className="flex items-center justify-between py-4 border-b border-white/10">
-                                <span className="text-white/70">Minimum Following</span>
-                                <span className="font-bold">500+</span>
+                                <span className="text-white/70">Social Impact Focus</span>
+                                <span className="font-bold">Required</span>
                             </div>
                             <div className="flex items-center justify-between py-4 border-b border-white/10">
-                                <span className="text-white/70">Engagement Rate</span>
-                                <span className="font-bold">2.5% Average</span>
+                                <span className="text-white/70">Authenticity & Integrity</span>
+                                <span className="font-bold">Essential</span>
                             </div>
                             <div className="flex items-center justify-between py-4 border-b border-white/10">
-                                <span className="text-white/70">Content Quality</span>
-                                <span className="font-bold">Verified Professional</span>
+                                <span className="text-white/70">Positive Community Values</span>
+                                <span className="font-bold">Core Standard</span>
                             </div>
                             <div className="flex items-center justify-between py-4">
                                 <span className="text-white/70">Application Status</span>
-                                <span className="text-blue-600 font-bold">Now Open</span>
+                                <span className="text-blue-600 font-bold">Open to All Impact Creators</span>
                             </div>
                         </div>
                     </div>
