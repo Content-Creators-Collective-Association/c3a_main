@@ -3,38 +3,38 @@ function AboutUs() {
         {
             name: 'Pavan Kumar',
             role: 'Managing Director',
-            image: 'https://i.pravatar.cc/300?img=12',
-            bio: 'Pavan previously led creator partnerships across multiple digital agencies and has spent 8+ years building systems that help creators scale sustainable businesses.'
+            image: '/founders/pavan-kumar.jpeg',
+            bio: 'Pavan is a veteran in the field and is passionate about helping creators build sustainable careers. He has a track record of building creator-focused platforms and communities that prioritize growth and support.'
         },
         {
             name: 'Shubhankar Pandey',
-            role: 'Co-Founder & Head of Growth',
-            image: 'https://i.pravatar.cc/300?img=47',
-            bio: 'Shubhankar is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
+            role: 'Operations Head',
+            image: '/founders/shubhankar-pandey.jpeg',
+            bio: 'Shubhankar has a background in operations and community management within the creator economy. He is passionate about building creator-first systems that prioritize growth and support.'
         },
         {
             name: 'Arya Pandey',
             role: 'Technical Head',
-            image: 'https://i.pravatar.cc/300?img=47',
-            bio: 'Arya is a growth strategist focused on audience development, brand positioning, and creator monetization. She has mentored hundreds of emerging creators.'
+            image: '/founders/arya-pandey.jpeg',
+            bio: 'Arya is a product and engineering leader with experience building creator platforms and tools. He is passionate about creating technology that empowers creators to grow their careers.'
         },
         {
             name: 'Shubham Pandey',
             role: 'Legal Head',
-            image: 'https://i.pravatar.cc/300?img=47',
+            image: '/founders/shubham-pandey.jpeg',
             bio: 'Shubham is a legal expert with a focus on creator rights and compliance. He has helped numerous creators navigate the legal aspects of their careers.'
         },
         {
             name: 'Shiv Kumar',
             role: 'Marketing Lead',
             image: 'https://i.pravatar.cc/300?img=47',
-            bio: 'Shiv is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
+            bio: 'Shiv is a marketing strategist with experience in digital campaigns and creator branding. He has worked with creators to amplify their reach and connect them with their audiences.'
         },
         {
             name: 'Sonu Kumar Dubey',
-            role: 'Operations Lead',
-            image: 'https://i.pravatar.cc/300?img=47',
-            bio: 'Sonu is a growth strategist focused on audience development, brand positioning, and creator monetization. He has mentored hundreds of emerging creators.'
+            role: 'Communications Lead',
+            image: '/founders/sonu-kumar-dubey.jpeg',
+            bio: 'Sonu is a communications expert with a background in PR and content strategy. He has worked closely with creators to amplify their voices and connect them with their audiences.'
         }
     ];
 
