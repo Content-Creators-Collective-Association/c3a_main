@@ -18,7 +18,7 @@ function Footer() {
                     <div className="flex gap-4">
                         <a
                             className="w-10 h-10 rounded-full border border-charcoal/10 flex items-center justify-center text-charcoal/50 hover:bg-white hover:text-blue-600 transition-all cursor-pointer"
-                            href="https://instagram.com"
+                            href="https://instagram.com/ccca.network"
                             target="_blank"
                             rel="noopener noreferrer"
                             title="Instagram"

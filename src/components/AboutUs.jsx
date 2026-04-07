@@ -27,7 +27,7 @@ function AboutUs() {
         {
             name: 'Shiv Kumar',
             role: 'Marketing Lead',
-            image: 'https://i.pravatar.cc/300?img=47',
+            image: '/founders/shiv-kumar.jpeg',
             bio: 'Shiv is a marketing strategist with experience in digital campaigns and creator branding. He has worked with creators to amplify their reach and connect them with their audiences.'
         },
         {
