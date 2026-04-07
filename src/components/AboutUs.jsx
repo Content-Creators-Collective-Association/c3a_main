@@ -164,7 +164,7 @@ function AboutUs() {
                                     <img
                                         src={founder.image}
                                         alt={founder.name}
-                                        className="w-24 h-24 rounded-2xl object-cover border border-charcoal/10"
+                                        className="w-24 h-24 rounded-lg object-cover border border-charcoal/10"
                                         loading="lazy"
                                     />
                                     <div>
