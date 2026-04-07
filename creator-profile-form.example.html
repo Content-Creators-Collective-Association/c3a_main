@@ -8,9 +8,15 @@
 <body>
   <form onsubmit="handleSubmit(event)">
     <input type="text" name="full_name" placeholder="Full Name" required />
-    <input type="text" name="address" placeholder="Address" required />
     <input type="number" name="age" placeholder="Age" required />
     <input type="text" name="nationality" placeholder="Nationality" required />
+    <input type="text" name="street" placeholder="Street" required />
+    <input type="text" name="city" placeholder="City" required />
+    <input type="text" name="state" placeholder="State" required />
+    <input type="text" name="country" placeholder="Country" required />
+    <input type="text" name="postal_code" placeholder="Postal Code" required />
+    <input type="tel" name="phone" placeholder="Phone" required />
+    <input type="email" name="email" placeholder="Email" required />
     <input type="text" name="profile_links" placeholder="Profile Links" required />
 
     <select name="social_platform" required>
@@ -28,6 +34,8 @@
       <option value="Entertainment">Entertainment</option>
       <option value="Tech">Tech</option>
     </select>
+
+    <textarea name="about" placeholder="About" required></textarea>
 
     <button type="submit">Submit</button>
   </form>

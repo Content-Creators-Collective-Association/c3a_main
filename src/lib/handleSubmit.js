@@ -16,13 +16,20 @@ export async function handleSubmit(event) {
 
     const payload = {
         full_name: String(formData.get('full_name') || '').trim(),
-        address: String(formData.get('address') || '').trim(),
         age,
         nationality: String(formData.get('nationality') || '').trim(),
+        street: String(formData.get('street') || '').trim(),
+        city: String(formData.get('city') || '').trim(),
+        state: String(formData.get('state') || '').trim(),
+        country: String(formData.get('country') || '').trim(),
+        postal_code: String(formData.get('postal_code') || '').trim(),
+        phone: String(formData.get('phone') || '').trim(),
+        email: String(formData.get('email') || '').trim().toLowerCase(),
         profile_links: String(formData.get('profile_links') || '').trim(),
         social_platform: String(formData.get('social_platform') || '').trim(),
         follower_count: followerCount,
         content_type: String(formData.get('content_type') || '').trim(),
+        about: String(formData.get('about') || '').trim(),
     };
 
     const { error } = await insertCreatorProfile(payload);
@@ -40,7 +47,7 @@ export async function handleSubmit(event) {
         return { success: false, error };
     }
 
-    alert('Submission successful. Thank you!');
+    alert(`Thanks ${payload.full_name || 'Creator'}! Your profile was submitted successfully.`);
     return { success: true };
 }
 
