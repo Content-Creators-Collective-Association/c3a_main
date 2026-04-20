@@ -14,13 +14,13 @@ function Hero() {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div>
                             <p className="text-xs font-extrabold tracking-widest uppercase text-emerald-700 mb-2">
-                                Soft Launch Announcement
+                                Updates Coming Soon
                             </p>
                             <h2 className="text-lg md:text-2xl font-extrabold text-charcoal leading-tight">
-                                Join Us On Zoom - 19 April 2026
+                                Follow the channel for more
                             </h2>
                             <p className="mt-2 text-sm md:text-base text-charcoal/75 leading-relaxed">
-                                Our soft launch happens on 19th April. All interested creators are requested to join our official WhatsApp channel for updates and joining details.
+                                We are working on bringing more interactions with our creators
                             </p>
                         </div>
                         <a
