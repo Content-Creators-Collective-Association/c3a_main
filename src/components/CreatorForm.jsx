@@ -5,6 +5,9 @@ function CreatorForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submittedName, setSubmittedName] = useState('');
+    const [socialPlatforms, setSocialPlatforms] = useState([
+        { platform: 'Instagram', profile_link: '', follower_count: '' }
+    ]);
 
     const nationalityOptions = [
         'Indian',
@@ -77,7 +80,7 @@ function CreatorForm() {
         const nextSubmittedName = String(new FormData(submittedForm).get('full_name') || '').trim();
 
         setIsSubmitting(true);
-        const result = await handleSubmit(e);
+        const result = await handleSubmit(e, socialPlatforms);
         setIsSubmitting(false);
         if (!result.success) {
             return;
@@ -86,10 +89,35 @@ function CreatorForm() {
         setSubmittedName(nextSubmittedName);
         setIsSubmitted(true);
         submittedForm.reset();
+        setSocialPlatforms([{ platform: 'Instagram', profile_link: '', follower_count: '' }]);
         setTimeout(() => {
             setIsSubmitted(false);
             setSubmittedName('');
         }, 3000);
+    };
+
+    const handleAddPlatform = () => {
+        setSocialPlatforms([
+            ...socialPlatforms,
+            { platform: 'Instagram', profile_link: '', follower_count: '' }
+        ]);
+    };
+
+    const handleRemovePlatform = (index) => {
+        if (socialPlatforms.length > 1) {
+            setSocialPlatforms(socialPlatforms.filter((_, i) => i !== index));
+        } else {
+            alert('You must have at least one social platform.');
+        }
+    };
+
+    const handlePlatformChange = (index, field, value) => {
+        const updatedPlatforms = [...socialPlatforms];
+        updatedPlatforms[index] = {
+            ...updatedPlatforms[index],
+            [field]: value
+        };
+        setSocialPlatforms(updatedPlatforms);
     };
 
     return (
@@ -258,39 +286,6 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Social Platform
-                                    </label>
-                                    <select
-                                        name="social_platform"
-                                        className="w-full bg-sand/30 border border-charcoal/10 rounded-2xl px-6 py-4 focus:ring-1 focus:ring-saffron outline-none transition-all appearance-none cursor-pointer"
-                                        required
-                                    >
-                                        <option value="Instagram">Instagram</option>
-                                        <option value="YouTube">YouTube</option>
-                                        <option value="LinkedIn">LinkedIn</option>
-                                        <option value="ShareChat">ShareChat</option>
-                                        <option value="Moj">Moj</option>
-                                        <option value="TikTok">TikTok</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div className="space-y-3">
-                                    <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Follower Count
-                                    </label>
-                                    <input
-                                        type="number"
-                                        name="follower_count"
-                                        min="0"
-                                        className="w-full bg-sand/30 border border-charcoal/10 rounded-2xl px-6 py-4 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all placeholder:text-charcoal/20"
-                                        placeholder="e.g. 12500"
-                                        required
-                                    />
-                                </div>
-                                <div className="space-y-3">
-                                    <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
                                         Content Type
                                     </label>
                                     <select
@@ -308,17 +303,84 @@ function CreatorForm() {
                                 </div>
                             </div>
 
-                            <div className="space-y-3">
-                                <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                    Profile Links
-                                </label>
-                                <input
-                                    type="text"
-                                    name="profile_links"
-                                    className="w-full bg-sand/30 border border-charcoal/10 rounded-2xl px-6 py-4 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all placeholder:text-charcoal/20"
-                                    placeholder="https://instagram.com/you, https://youtube.com/@you"
-                                    required
-                                />
+                            <div className="space-y-4">
+                                <div className="flex justify-between items-center">
+                                    <label className="text-xs font-bold text-charcoal uppercase tracking-widest">
+                                        Social Platforms
+                                    </label>
+                                    <button
+                                        type="button"
+                                        onClick={handleAddPlatform}
+                                        className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1"
+                                    >
+                                        <span>+</span> Add Platform
+                                    </button>
+                                </div>
+
+                                {socialPlatforms.map((platformData, index) => (
+                                    <div key={index} className="space-y-3 p-6 bg-sand/20 rounded-2xl border border-charcoal/10">
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="space-y-2">
+                                                <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
+                                                    Platform
+                                                </label>
+                                                <select
+                                                    value={platformData.platform}
+                                                    onChange={(e) => handlePlatformChange(index, 'platform', e.target.value)}
+                                                    className="w-full bg-sand/30 border border-charcoal/10 rounded-2xl px-6 py-4 focus:ring-1 focus:ring-saffron outline-none transition-all appearance-none cursor-pointer"
+                                                    required
+                                                >
+                                                    <option value="Instagram">Instagram</option>
+                                                    <option value="Facebook">Facebook</option>
+                                                    <option value="YouTube">YouTube</option>
+                                                    <option value="X">X</option>
+                                                    <option value="Quora">Quora</option>
+                                                    <option value="Reddit">Reddit</option>
+                                                    <option value="WhatsApp">WhatsApp</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            </div>
+                                            <div className="space-y-2">
+                                                <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
+                                                    Profile Link
+                                                </label>
+                                                <input
+                                                    type="url"
+                                                    value={platformData.profile_link}
+                                                    onChange={(e) => handlePlatformChange(index, 'profile_link', e.target.value)}
+                                                    className="w-full bg-sand/30 border border-charcoal/10 rounded-2xl px-6 py-4 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all placeholder:text-charcoal/20"
+                                                    placeholder="https://instagram.com/your_handle"
+                                                    required
+                                                />
+                                            </div>
+                                            <div className="space-y-2">
+                                                <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
+                                                    Followers
+                                                </label>
+                                                <div className="flex gap-2">
+                                                    <input
+                                                        type="number"
+                                                        value={platformData.follower_count}
+                                                        onChange={(e) => handlePlatformChange(index, 'follower_count', e.target.value)}
+                                                        min="0"
+                                                        className="flex-1 bg-sand/30 border border-charcoal/10 rounded-2xl px-6 py-4 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all placeholder:text-charcoal/20"
+                                                        placeholder="e.g. 12500"
+                                                        required
+                                                    />
+                                                    {socialPlatforms.length > 1 && (
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => handleRemovePlatform(index)}
+                                                            className="px-4 py-4 bg-red-100 text-red-600 font-bold rounded-2xl hover:bg-red-200 transition-all"
+                                                        >
+                                                            Remove
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
 
                             <div className="space-y-3">
