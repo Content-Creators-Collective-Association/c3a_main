@@ -10,11 +10,12 @@ function Header() {
     return (
         <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-sand/90 backdrop-blur-md">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                    <div className="bg-blue-600 p-1.5 rounded-lg text-white">
-                        <span className="material-symbols-outlined block text-2xl font-bold">verified_user</span>
-                    </div>
-                    <h2 className="text-2xl font-extrabold tracking-tight text-charcoal">C3A</h2>
+                <div className="flex items-center">
+                    <img
+                        src="/favicon.svg"
+                        alt="C3A logo"
+                        className="h-11 w-11 md:h-12 md:w-12 rounded-xl object-contain"
+                    />
                 </div>
                 <nav className="hidden md:flex items-center gap-10">
                     <a
