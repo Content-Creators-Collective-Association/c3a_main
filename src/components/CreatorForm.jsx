@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { handleSubmit } from '../lib/handleSubmit';
+import { submitCreatorApplication } from '../lib/creatorApplicationService';
 
 function CreatorForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -79,10 +79,13 @@ function CreatorForm() {
         const submittedForm = e.target;
         const nextSubmittedName = String(new FormData(submittedForm).get('full_name') || '').trim();
 
+        e.preventDefault();
         setIsSubmitting(true);
-        const result = await handleSubmit(e, socialPlatforms);
+
+        const result = await submitCreatorApplication(new FormData(submittedForm), socialPlatforms);
         setIsSubmitting(false);
-        if (!result.success) {
+        if (!result.ok) {
+            alert(`Submission failed: ${result.error.message}`);
             return;
         }
 

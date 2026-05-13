@@ -50,3 +50,17 @@ Supabase Form Integration
 	- `profile_url` (text)
 	- `terms_accepted` (boolean)
 4. Enable insert access with an RLS policy for your chosen usage pattern.
+
+Approval -> Auth Provisioning Workflow
+1. Apply SQL migration in [supabase/migrations/20260513_creator_approval_auth_workflow.sql](supabase/migrations/20260513_creator_approval_auth_workflow.sql).
+2. Deploy Edge Function from [supabase/functions/approve-creator/index.ts](supabase/functions/approve-creator/index.ts):
+	- `supabase functions deploy approve-creator`
+3. Set Edge Function secrets:
+	- `SERVICE_ROLE_KEY=<your-service-role-key>`
+	- `AUTH_REDIRECT_URL=https://your-domain.com/auth`
+4. When a creator profile is approved, invoke `approve-creator` with `profileId`.
+5. The function will:
+	- set profile status to approved,
+	- create/link Supabase Auth user,
+	- insert row into `authenticated_user`,
+	- send password setup email to the creator.

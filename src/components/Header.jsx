@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
+import { scrollToSection } from '../lib/scrollToSection';
+
 function Header() {
     const handleSmoothScroll = (e, targetId) => {
         e.preventDefault();
-        const target = document.querySelector(targetId);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        scrollToSection(targetId);
     };
 
     return (
@@ -48,6 +48,12 @@ function Header() {
                     >
                         Apply Now
                     </a>
+                    <Link
+                        to="/auth"
+                        className="border border-charcoal/20 text-charcoal px-6 py-2.5 rounded-full text-sm font-bold hover:bg-white transition-colors"
+                    >
+                        Creator Login
+                    </Link>
                 </nav>
             </div>
         </header>

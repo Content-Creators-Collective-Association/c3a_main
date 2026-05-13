@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
+import { scrollToSection } from '../lib/scrollToSection';
+
 function Hero() {
     const handleSmoothScroll = (e, targetId) => {
         e.preventDefault();
-        const target = document.querySelector(targetId);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        scrollToSection(targetId);
     };
 
     return (
@@ -51,6 +51,12 @@ function Hero() {
                     >
                         Apply to Join <span className="material-symbols-outlined">arrow_forward</span>
                     </a>
+                    <Link
+                        to="/auth"
+                        className="w-full sm:w-auto px-10 py-5 border border-charcoal/20 text-charcoal/85 font-bold rounded-full text-lg hover:bg-white transition-colors text-center"
+                    >
+                        Sign In / Create Account
+                    </Link>
                     <a
                         className="w-full sm:w-auto px-10 py-5 border border-charcoal/10 text-charcoal/80 font-bold rounded-full text-lg hover:bg-white transition-colors cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
