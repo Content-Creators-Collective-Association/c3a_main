@@ -1,4 +1,8 @@
+import { useLanguage } from '../context/LanguageContext';
+
 function Footer() {
+    const { t } = useLanguage();
+
     return (
         <footer className="py-16 bg-sand border-t border-charcoal/5">
             <div className="max-w-7xl mx-auto px-6">
@@ -10,10 +14,10 @@ function Footer() {
                         <h2 className="text-2xl font-extrabold tracking-tight text-charcoal">C3A</h2>
                     </div>
                     <div className="flex flex-wrap justify-center gap-10 text-[10px] font-bold uppercase tracking-widest text-charcoal/50">
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">Support</a>
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">Privacy</a>
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">Terms</a>
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">Contact</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.support')}</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.privacy')}</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.terms')}</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.contact')}</a>
                     </div>
                     <div className="flex gap-4">
                         <a
@@ -52,7 +56,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="text-center pt-8 border-t border-charcoal/5 text-[10px] font-bold uppercase tracking-widest text-charcoal/30">
-                    © 2024 C3A PLATFORM. ALL RIGHTS RESERVED. EMPOWERING THE CREATOR ECONOMY.
+                    {t('footer.copyright')}
                 </div>
             </div>
         </footer>

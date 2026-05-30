@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const LANGUAGE_STORAGE_KEY = 'c3a-language';
 
 function LanguagePrompt({ onConfirm }) {
     const [selectedLanguage, setSelectedLanguage] = useState('en');
+    const { changeLanguage } = useLanguage();
 
     const handleConfirm = () => {
-        localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
-        document.documentElement.lang = selectedLanguage;
+        changeLanguage(selectedLanguage);
         onConfirm(selectedLanguage);
     };
 
@@ -30,19 +31,13 @@ function LanguagePrompt({ onConfirm }) {
                     className="w-full mt-2 bg-sand/30 border border-charcoal/10 rounded-2xl px-5 py-4 focus:ring-1 focus:ring-blue-600 outline-none transition-all"
                 >
                     <option value="en">English</option>
-                    <option value="hi">Hindi</option>
-                    <option value="bn">Bengali</option>
-                    <option value="te">Telugu</option>
-                    <option value="mr">Marathi</option>
-                    <option value="ta">Tamil</option>
-                    <option value="ur">Urdu</option>
                     <option value="gu">Gujarati</option>
-                    <option value="kn">Kannada</option>
-                    <option value="ml">Malayalam</option>
-                    <option value="or">Odia</option>
-                    <option value="pa">Punjabi</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ta">Tamil</option>
+                    <option value="bn">Bengali</option>
                     <option value="as">Assamese</option>
-                    <option value="mai">Maithili</option>
+                    <option value="mr">Marathi</option>
+                    <option value="ml">Malayalam</option>
                 </select>
 
                 <button

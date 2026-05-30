@@ -1,38 +1,41 @@
+import { useLanguage } from '../context/LanguageContext';
+
 function HowItWorks() {
+    const { t } = useLanguage();
     return (
         <section className="py-24 fade-in-section" id="how-it-works">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl font-extrabold mb-6 text-charcoal">The Onboarding Path</h2>
-                    <p className="text-charcoal/60 text-lg">A simple four-step process to professionalize your platform.</p>
+                    <h2 className="text-4xl font-extrabold mb-6 text-charcoal">{t('howItWorks.title')}</h2>
+                    <p className="text-charcoal/60 text-lg">{t('howItWorks.subtitle')}</p>
                 </div>
                 <div className="grid md:grid-cols-4 gap-12">
                     <div>
                         <div className="text-saffron font-extrabold text-5xl mb-6 opacity-20">01</div>
-                        <h4 className="text-xl font-extrabold mb-3">Submission</h4>
+                        <h4 className="text-xl font-extrabold mb-3">{t('howItWorks.step1')}</h4>
                         <p className="text-charcoal/60 leading-relaxed text-sm">
-                            Provide your social links and audience demographics for initial screening.
+                            {t('howItWorks.step1Desc')}
                         </p>
                     </div>
                     <div>
                         <div className="text-saffron font-extrabold text-5xl mb-6 opacity-20">02</div>
-                        <h4 className="text-xl font-extrabold mb-3">Review</h4>
+                        <h4 className="text-xl font-extrabold mb-3">{t('howItWorks.step2')}</h4>
                         <p className="text-charcoal/60 leading-relaxed text-sm">
-                            Our team evaluates content quality and authentic engagement metrics.
+                            {t('howItWorks.step2Desc')}
                         </p>
                     </div>
                     <div>
                         <div className="text-saffron font-extrabold text-5xl mb-6 opacity-20">03</div>
-                        <h4 className="text-xl font-extrabold mb-3">Selection</h4>
+                        <h4 className="text-xl font-extrabold mb-3">{t('howItWorks.step3')}</h4>
                         <p className="text-charcoal/60 leading-relaxed text-sm">
-                            Creators undergo filtering and checks to ensure alignment with our community values and standards.
+                            {t('howItWorks.step3Desc')}
                         </p>
                     </div>
                     <div>
                         <div className="text-saffron font-extrabold text-5xl mb-6 opacity-20">04</div>
-                        <h4 className="text-xl font-extrabold mb-3">Growth</h4>
+                        <h4 className="text-xl font-extrabold mb-3">{t('howItWorks.step4')}</h4>
                         <p className="text-charcoal/60 leading-relaxed text-sm">
-                            Gain access to exclusive campaigns and high-value partnerships along with support from our creator success team.
+                            {t('howItWorks.step4Desc')}
                         </p>
                     </div>
                 </div>

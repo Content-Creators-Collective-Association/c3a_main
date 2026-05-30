@@ -1,11 +1,14 @@
+import { useLanguage } from '../context/LanguageContext';
+
 function MembershipSubscription() {
+    const { t } = useLanguage();
     const subscriptionPlans = [
         {
-            name: 'Starter',
+            nameKey: 'membership.starter.name',
             price: '₹10',
             period: '/month',
-            description: 'Perfect for emerging creators just starting their journey',
-            eligibility: 'Open to all eligible creators',
+            descriptionKey: 'membership.starter.description',
+            eligibilityKey: 'membership.starter.eligibility',
             features: [
                 'Access to C3A community',
                 'Monthly brand opportunity alerts',
@@ -13,15 +16,15 @@ function MembershipSubscription() {
                 'Email support',
                 'Portfolio verification badge'
             ],
-            cta: 'Get Started',
+            ctaKey: 'membership.starter.cta',
             highlighted: false
         },
         {
-            name: 'Professional',
+            nameKey: 'membership.professional.name',
             price: '₹60',
             period: '/month',
-            description: 'For growing creators looking to scale their impact',
-            eligibility: 'Requires 3 months of active Starter membership',
+            descriptionKey: 'membership.professional.description',
+            eligibilityKey: 'membership.professional.eligibility',
             features: [
                 'Everything in Starter',
                 'Priority brand partnership access',
@@ -32,15 +35,15 @@ function MembershipSubscription() {
                 'Exclusive professional network events',
                 'Negotiation assistance for contracts'
             ],
-            cta: 'Choose Professional',
+            ctaKey: 'membership.professional.cta',
             highlighted: true
         },
         {
-            name: 'Elite',
+            nameKey: 'membership.elite.name',
             price: '₹120',
             period: '/month',
-            description: 'For established creators maximizing their growth potential',
-            eligibility: 'Requires 6 months of active Starter membership',
+            descriptionKey: 'membership.elite.description',
+            eligibilityKey: 'membership.elite.eligibility',
             features: [
                 'Everything in Professional',
                 'Dedicated account manager',
@@ -52,7 +55,7 @@ function MembershipSubscription() {
                 '24/7 priority support',
                 'Legal & contract review support'
             ],
-            cta: 'Go Elite',
+            ctaKey: 'membership.elite.cta',
             highlighted: false
         }
     ];
@@ -62,10 +65,10 @@ function MembershipSubscription() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl font-extrabold mb-6 text-charcoal">
-                        Membership <span className="text-blue-600">Subscriptions</span>
+                        {t('membership.title')} <span className="text-blue-600">{t('membership.subtitle')}</span>
                     </h2>
                     <p className="text-charcoal/60 text-lg max-w-2xl mx-auto">
-                        Choose the plan that fits your creator journey. Scale up anytime as you grow.
+                        {t('membership.description')}
                     </p>
                 </div>
 
@@ -82,17 +85,17 @@ function MembershipSubscription() {
                             {plan.highlighted && (
                                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                                     <span className="bg-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full">
-                                        MOST POPULAR
+                                        {t('membership.mostPopular')}
                                     </span>
                                 </div>
                             )}
 
                             <div className="p-10 h-full flex flex-col">
                                 <div className="mb-8">
-                                    <h3 className="text-2xl font-extrabold text-charcoal mb-2">{plan.name}</h3>
-                                    <p className="text-charcoal/60 text-sm mb-6">{plan.description}</p>
+                                    <h3 className="text-2xl font-extrabold text-charcoal mb-2">{t(plan.nameKey)}</h3>
+                                    <p className="text-charcoal/60 text-sm mb-6">{t(plan.descriptionKey)}</p>
                                     <p className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-100 rounded-xl px-3 py-2 mb-6">
-                                        {plan.eligibility}
+                                        {t(plan.eligibilityKey)}
                                     </p>
                                     <div className="flex items-baseline gap-1">
                                         <span className="text-4xl font-extrabold text-charcoal">{plan.price}</span>
@@ -107,12 +110,12 @@ function MembershipSubscription() {
                                             : 'bg-charcoal text-white hover:bg-black'
                                     }`}
                                 >
-                                    {plan.cta}
+                                    {t(plan.ctaKey)}
                                 </button>
 
                                 <div className="space-y-4 flex-grow">
                                     <p className="text-xs font-bold text-charcoal/40 uppercase tracking-widest mb-6">
-                                        What's included
+                                        {t('membership.whatIncluded')}
                                     </p>
                                     {plan.features.map((feature, featureIndex) => (
                                         <div key={featureIndex} className="flex gap-3">
@@ -132,15 +135,15 @@ function MembershipSubscription() {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                         <div>
                             <p className="text-[11px] font-bold tracking-[0.18em] uppercase text-blue-200 mb-3">
-                                Coming Soon
+                                {t('membership.comingSoon')}
                             </p>
-                            <h3 className="text-2xl md:text-3xl font-extrabold mb-3">Official C3A Branded Merch</h3>
+                            <h3 className="text-2xl md:text-3xl font-extrabold mb-3">{t('membership.merchandise')}</h3>
                             <p className="text-white/75 max-w-2xl">
-                                Limited-edition creator merchandise designed for community pride and on-ground events. Early access will be offered to active members.
+                                {t('membership.merchandiseDesc')}
                             </p>
                         </div>
                         <span className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-bold text-white/90 w-fit">
-                            Drops Announced Soon
+                            {t('membership.dropsAnnouncedSoon')}
                         </span>
                     </div>
                 </div>

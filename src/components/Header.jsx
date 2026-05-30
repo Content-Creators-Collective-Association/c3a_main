@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { scrollToSection } from '../lib/scrollToSection';
+import { useLanguage } from '../context/LanguageContext';
 
 function Header() {
+    const { t } = useLanguage();
+
     const handleSmoothScroll = (e, targetId) => {
         e.preventDefault();
         scrollToSection(targetId);
@@ -22,37 +25,37 @@ function Header() {
                         className="text-sm font-semibold text-charcoal/70 hover:text-blue-600 transition-colors cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#about')}
                     >
-                        About Us
+                        {t('header.aboutUs')}
                     </a>
                     <a
                         className="text-sm font-semibold text-charcoal/70 hover:text-saffron transition-colors cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
                     >
-                        The Process
+                        {t('header.theProcess')}
                     </a>
                     <a
                         className="text-sm font-semibold text-charcoal/70 hover:text-blue-600 transition-colors cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#qualify')}
                     >
-                        Eligibility
+                        {t('header.eligibility')}
                     </a>
                     <a
                         className="text-sm font-semibold text-charcoal/70 hover:text-saffron transition-colors cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#membership-subscriptions')}
                     >
-                        Pricing
+                        {t('header.pricing')}
                     </a>
                     <a
                         className="bg-charcoal text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-black transition-all cursor-pointer"
                         onClick={(e) => handleSmoothScroll(e, '#apply')}
                     >
-                        Apply Now
+                        {t('header.applyNow')}
                     </a>
                     <Link
                         to="/auth"
                         className="border border-charcoal/20 text-charcoal px-6 py-2.5 rounded-full text-sm font-bold hover:bg-white transition-colors"
                     >
-                        Creator Login
+                        {t('header.creatorLogin')}
                     </Link>
                 </nav>
             </div>

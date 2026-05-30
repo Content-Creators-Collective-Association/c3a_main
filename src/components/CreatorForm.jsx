@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import { submitCreatorApplication } from '../lib/creatorApplicationService';
 
 function CreatorForm() {
+    const { t } = useLanguage();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submittedName, setSubmittedName] = useState('');
@@ -128,8 +130,8 @@ function CreatorForm() {
             <div className="max-w-4xl mx-auto px-6">
                 <div className="bg-white border border-charcoal/5 rounded-[3rem] p-8 md:p-16 shadow-xl shadow-charcoal/5">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-extrabold mb-4 text-charcoal">Creator Profile Submission</h2>
-                        <p className="text-charcoal/60">Share your details to be considered for premium C3A opportunities.</p>
+                        <h2 className="text-4xl font-extrabold mb-4 text-charcoal">{t('form.title')}</h2>
+                        <p className="text-charcoal/60">{t('form.subtitle')}</p>
                     </div>
 
                     {isSubmitted ? (
@@ -137,11 +139,11 @@ function CreatorForm() {
                             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <span className="material-symbols-outlined text-4xl text-green-600">check_circle</span>
                             </div>
-                            <h3 className="text-2xl font-bold text-charcoal mb-3">Profile Submitted!</h3>
+                            <h3 className="text-2xl font-bold text-charcoal mb-3">{t('form.submitted')}</h3>
                             <p className="text-charcoal/60">
                                 {submittedName
-                                    ? `Thank you, ${submittedName}. Your profile has been received and our team will reach out shortly.`
-                                    : 'Thank you for submitting your profile. Our team will review it and respond shortly.'}
+                                    ? t('form.submittedMsgWithName').replace('{{name}}', submittedName)
+                                    : t('form.submittedMsg')}
                             </p>
                         </div>
                     ) : (
@@ -149,7 +151,7 @@ function CreatorForm() {
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Full Name
+                                        {t('form.fullName')}
                                     </label>
                                     <input
                                         type="text"
@@ -161,7 +163,7 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Nationality
+                                        {t('form.nationality')}
                                     </label>
                                     <select
                                         name="nationality"
@@ -179,7 +181,7 @@ function CreatorForm() {
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-3 md:col-span-2">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Street Address
+                                        {t('form.street')}
                                     </label>
                                     <input
                                         type="text"
@@ -191,7 +193,7 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        City
+                                        {t('form.city')}
                                     </label>
                                     <input
                                         type="text"
@@ -203,7 +205,7 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        State
+                                        {t('form.state')}
                                     </label>
                                     <select
                                         name="state"
@@ -219,7 +221,7 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Country
+                                        {t('form.country')}
                                     </label>
                                     <select
                                         name="country"
@@ -234,7 +236,7 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Postal Code
+                                        {t('form.postalCode')}
                                     </label>
                                     <input
                                         type="text"
@@ -249,7 +251,7 @@ function CreatorForm() {
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Phone Number
+                                        {t('form.phone')}
                                     </label>
                                     <input
                                         type="tel"
@@ -261,7 +263,7 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Email Address
+                                        {t('form.email')}
                                     </label>
                                     <input
                                         type="email"
@@ -276,7 +278,7 @@ function CreatorForm() {
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Age
+                                        {t('form.age')}
                                     </label>
                                     <input
                                         type="number"
@@ -289,7 +291,7 @@ function CreatorForm() {
                                 </div>
                                 <div className="space-y-3">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest ml-1">
-                                        Content Type
+                                        {t('form.contentType')}
                                     </label>
                                     <select
                                         name="content_type"
@@ -309,7 +311,7 @@ function CreatorForm() {
                             <div className="space-y-4">
                                 <div className="flex justify-between items-center">
                                     <label className="text-xs font-bold text-charcoal uppercase tracking-widest">
-                                        Social Platforms
+                                        {t('hero.joinWhatsApp')}
                                     </label>
                                     <button
                                         type="button"
@@ -419,14 +421,14 @@ function CreatorForm() {
                                 {isSubmitting ? (
                                     <span className="flex items-center justify-center gap-2">
                                         <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                                        Submitting...
+                                        {t('form.submitButton')}...
                                     </span>
                                 ) : (
-                                    'Submit Profile'
+                                    t('form.submitButton')
                                 )}
                             </button>
                             <p className="text-center text-[10px] text-charcoal/40 font-bold mt-6 leading-relaxed">
-                                OUR TEAM WILL REVIEW YOUR APPLICATION AND REACH OUT TO YOU.
+                                {t('form.highVolume')}
                             </p>
                         </form>
                     )}
