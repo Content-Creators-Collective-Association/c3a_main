@@ -6,7 +6,9 @@
       "eligibility": "Eligibility",
       "pricing": "Pricing",
       "applyNow": "Apply Now",
-      "creatorLogin": "Creator Login"
+      "creatorLogin": "Creator Login",
+      "creatorsLab": "Creators Lab",
+      "merchandise": "Merchandise"
     },
     "hero": {
       "badge": "Empowering the Creator Economy",
@@ -111,6 +113,10 @@
       "merchandiseDesc": "Limited-edition creator merchandise designed for community pride and on-ground events. Early access will be offered to active members.",
       "dropsAnnouncedSoon": "Drops Announced Soon"
     },
+    "creatorsLab": {
+      "title": "Creators Lab",
+      "description": "Resources, workshops and tools to help creators prototype, learn, and collaborate."
+    },
     "faq": {
       "title": "Frequently Asked Questions",
       "subtitle": "Quick answers to common questions from creators joining C3A.",
@@ -160,7 +166,9 @@
       "eligibility": "પાત્રતા",
       "pricing": "કિંમત",
       "applyNow": "હવે અરજી કરો",
-      "creatorLogin": "ક્રિયેટર લૉગિન"
+      "creatorLogin": "ક્રિયેટર લૉગિન",
+      "creatorsLab": "ક્રિએટર્સ લેબ",
+      "merchandise": "મર્ચેન્ડાઇઝ"
     },
     "hero": {
       "badge": "સર્જક અર્થતંત્રને સશક્ત બનાવવું",
@@ -265,6 +273,10 @@
       "merchandiseDesc": "સમુદાય ગર્વ અને ઑન-ગ્રાઉન્ડ ઈવેન્ટ માટે ડિઝાઇન કર્યો હોય તેવી મર્યાદિત-આવૃત્તિ સર્જક સામગ્રી. સક્રિય સભ્યોને આગામી એક્સેસ આપવામાં આવશે.",
         "dropsAnnouncedSoon": "ડ્રોપ્સ જલ્દીથી જાહેર કરવામાં આવશે"
     },
+      "creatorsLab": {
+        "title": "ક્રિએટર્સ લેબ",
+        "description": "સર્જકો માટે પ્રોટોટાઇપ, શીખવા અને સહયોગ માટેના સંસાધનો, વર્કશોપ અને ટૂલ્સ."
+      },
     "faq": {
       "title": "વારંવાર પૂછાયેલ પ્રશ્નો",
       "subtitle": "C3A માં યોગ દાન કરતા સર્જકો પાસેથી સામાન્ય પ્રશ્નોના ઝડપી જવાબો.",
@@ -314,7 +326,9 @@
       "eligibility": "पात्रता",
       "pricing": "मूल्य निर्धारण",
       "applyNow": "अभी आवेदन करें",
-      "creatorLogin": "निर्माता लॉगिन"
+      "creatorLogin": "निर्माता लॉगिन",
+      "creatorsLab": "क्रिएटर्स लैब",
+      "merchandise": "मर्चेंडाइज़"
     },
     "hero": {
       "heading1": "सृजनकर्ता अर्थव्यवस्था को सशक्त बनाना",
@@ -410,6 +424,10 @@
       "merchandiseDesc": "समुदाय के गौरव और ऑन-ग्राउंड इवेंट्स के लिए डिज़ाइन किया गया सीमित-संस्करण निर्माता व्यापार। सक्रिय सदस्यों को जल्दी पहुंच दी जाएगी।",
       "dropsAnnouncedSoon": "ड्रॉप्स जल्द घोषित"
     },
+    "creatorsLab": {
+      "title": "क्रिएटर्स लैब",
+      "description": "निर्माताओं के लिए संसाधन, कार्यशालाएँ और सहयोग टूल।"
+    },
     "faq": {
       "title": "बार-बार पूछे जाने वाले सवाल",
       "subtitle": "C3A में शामिल होने वाले निर्माताओं से सामान्य प्रश्नों के त्वरित उत्तर।",
@@ -461,7 +479,9 @@
       "eligibility": "தகுதி",
       "pricing": "விலை நির்ধारணை",
       "applyNow": "இப்போது விண்ணப்பிக்கவும்",
-      "creatorLogin": "உருவாக்கர் உள்நுழைவு"
+      "creatorLogin": "உருவாக்கர் உள்நுழைவு",
+      "creatorsLab": "கிரியேட்டர்ஸ் லேப்",
+      "merchandise": "மர்சண்டைஸ்"
     },
     "hero": {
       "heading1": "படைப்பாளி பொருளாதாரத்திற்கு வலுவூட்டுதல்",
@@ -497,6 +517,11 @@
       "collaborationCircles": "সহযोग வட்டங்கள்",
       "collaborationCirclesDesc": "கியூரேট் செய்யப்பட்ட சக குழுக்கள் இதில் படைப்பாளிகள் ஒன்றாக சহ-உருவாக்கம் செய்கின்றனர், கருத்து வিനிময் செய்கின்றனர் மற்றும் ஆணை-ஒருங்கிணைக்கப்பட்ட திட்டங்களைத் தொடங்குகின்றனர்."
     },
+    "creatorsLab": {
+      "title": "கிரியேட்டர்ஸ் லேப்",
+      "description": "பிரோட்டோடைப் செய்வதற்கான அறிவுசார் வளங்கள், பயிற்சிக்கூடங்கள் மற்றும் படைப்பாளிகளுக்கான உதவித்தோன்றல்கள்."
+    },
+    
     "creatorFit": {
       "title": "நாம் யாருடன் கூட்டாளிகளாக இருக்கிறோம்",
       "description": "நாங்கள் உருவாக்கர்களை மேம்படுத்துவதற்கு உறுதிபட்டுள்ள, மற்றும் கணிசமான சামাজிக நன்மையை உண்டாக்க உள்ளடக்கத்தை பயன்படுத்தும் படைப்பாளிகளுடன் கூட்டாளிகளாக இருக்கிறோம்.",
@@ -537,6 +562,22 @@
       "terms": "விதிமுறைகள்",
       "contact": "தொடர்பு",
       "copyright": "© 2024 C3A தளம். பதிப்புரிமை கோபுரம் உபயോगि. படைப்பாளி பொருளாதாரத்தை சக்திவாய்்ப்பமை் செய்|}."
+    }
+  },
+  "bn": {
+    "header": {
+      "aboutUs": "আমাদের সম্পর্কে",
+      "theProcess": "প্রক্রিয়া",
+      "eligibility": "যোগ্যতা",
+      "pricing": "মূল্য",
+      "applyNow": "এখনই আবেদন করুন",
+      "creatorLogin": "ক্রিয়েটর লগইন",
+      "creatorsLab": "ক্রিয়েটর্স ল্যাব",
+      "merchandise": "মারচেন্ডাইজ"
+    },
+    "creatorsLab": {
+      "title": "ক্রিয়েটর্স ল্যাব",
+      "description": "স্রষ্টাদের জন্য রিসোর্স, ওয়ার্কশপ এবং সহযোগিতার টুলস।"
     }
   }
 }
