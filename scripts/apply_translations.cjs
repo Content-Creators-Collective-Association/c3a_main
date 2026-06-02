@@ -29,15 +29,18 @@ function buildMap(rows) {
     en: headers.findIndex(h => /english/i.test(h)),
     bn: headers.findIndex(h => /bengali/i.test(h)),
     as: headers.findIndex(h => /assam|assamese/i.test(h)),
+    mr: headers.findIndex(h => /marathi|mr/i.test(h)),
   };
   const map = new Map();
+  function normalize(s){ return (s||'').replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/\s+/g,' ').trim(); }
   for (let i = 1; i < rows.length; i++) {
     const r = rows[i];
-    const en = (r[idx.en] || '').trim();
+    const en = normalize(r[idx.en] || '');
     if (!en) continue;
     map.set(en, {
       bn: (idx.bn>=0? (r[idx.bn]||'').trim() : ''),
       as: (idx.as>=0? (r[idx.as]||'').trim() : ''),
+      mr: (idx.mr>=0? (r[idx.mr]||'').trim() : ''),
     });
   }
   return map;
@@ -64,10 +67,11 @@ function buildMap(rows) {
         for (const k of Object.keys(src)) {
           const v = src[k];
           if (typeof v === 'string') {
-            const match = map.get(v);
-            dst[k] = match && match[langKey] ? match[langKey] : v;
+                const norm = (function(s){ return (s||'').replace(/[“”]/g,'\"').replace(/[‘’]/g,"' ").replace(/\s+/g,' ').trim(); })(v);
+                const match = map.get(norm) || map.get(v);
+                dst[k] = match && match[langKey] ? match[langKey] : v;
           } else if (Array.isArray(v)) {
-            dst[k] = v.map(item => typeof item === 'string' ? (map.get(item)?.[langKey] || item) : (typeof item === 'object' ? (function(){ const nested = {}; recurse(item, nested); return nested; })() : item));
+                dst[k] = v.map(item => typeof item === 'string' ? (map.get((item||'').replace(/[“”]/g,'\"').replace(/[‘’]/g,"' ").replace(/\s+/g,' ').trim())?.[langKey] || map.get(item)?.[langKey] || item) : (typeof item === 'object' ? (function(){ const nested = {}; recurse(item, nested); return nested; })() : item));
           } else {
             dst[k] = {};
             recurse(v, dst[k]);
@@ -80,9 +84,10 @@ function buildMap(rows) {
 
     translations.bn = buildLang('bn');
     translations.as = buildLang('as');
+    translations.mr = buildLang('mr');
 
     fs.writeFileSync(translationsPath, JSON.stringify(translations, null, 2), 'utf8');
-    console.log('Updated translations.json with bn and as');
+    console.log('Updated translations.json with bn, as and mr');
   } catch (err) {
     console.error(err);
     process.exit(10);
