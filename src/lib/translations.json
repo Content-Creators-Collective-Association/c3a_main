@@ -271,12 +271,12 @@
       "comingSoon": "જલ્દી આવતુ",
       "merchandise": "C3A ના સત્તાવાર બ્રાન્ડેડ મર્ચ",
       "merchandiseDesc": "સમુદાય ગર્વ અને ઑન-ગ્રાઉન્ડ ઈવેન્ટ માટે ડિઝાઇન કર્યો હોય તેવી મર્યાદિત-આવૃત્તિ સર્જક સામગ્રી. સક્રિય સભ્યોને આગામી એક્સેસ આપવામાં આવશે.",
-        "dropsAnnouncedSoon": "ડ્રોપ્સ જલ્દીથી જાહેર કરવામાં આવશે"
+      "dropsAnnouncedSoon": "ડ્રોપ્સ જલ્દીથી જાહેર કરવામાં આવશે"
     },
-      "creatorsLab": {
-        "title": "ક્રિએટર્સ લેબ",
-        "description": "સર્જકો માટે પ્રોટોટાઇપ, શીખવા અને સહયોગ માટેના સંસાધનો, વર્કશોપ અને ટૂલ્સ."
-      },
+    "creatorsLab": {
+      "title": "ક્રિએટર્સ લેબ",
+      "description": "સર્જકો માટે પ્રોટોટાઇપ, શીખવા અને સહયોગ માટેના સંસાધનો, વર્કશોપ અને ટૂલ્સ."
+    },
     "faq": {
       "title": "વારંવાર પૂછાયેલ પ્રશ્નો",
       "subtitle": "C3A માં યોગ દાન કરતા સર્જકો પાસેથી સામાન્ય પ્રશ્નોના ઝડપી જવાબો.",
@@ -521,7 +521,6 @@
       "title": "கிரியேட்டர்ஸ் லேப்",
       "description": "பிரோட்டோடைப் செய்வதற்கான அறிவுசார் வளங்கள், பயிற்சிக்கூடங்கள் மற்றும் படைப்பாளிகளுக்கான உதவித்தோன்றல்கள்."
     },
-    
     "creatorFit": {
       "title": "நாம் யாருடன் கூட்டாளிகளாக இருக்கிறோம்",
       "description": "நாங்கள் உருவாக்கர்களை மேம்படுத்துவதற்கு உறுதிபட்டுள்ள, மற்றும் கணிசமான சামাজிக நன்மையை உண்டாக்க உள்ளடக்கத்தை பயன்படுத்தும் படைப்பாளிகளுடன் கூட்டாளிகளாக இருக்கிறோம்.",
@@ -566,34 +565,322 @@
   },
   "bn": {
     "header": {
-      "aboutUs": "আমাদের সম্পর্কে",
-      "theProcess": "প্রক্রিয়া",
-      "eligibility": "যোগ্যতা",
-      "pricing": "মূল্য",
-      "applyNow": "এখনই আবেদন করুন",
-      "creatorLogin": "ক্রিয়েটর লগইন",
-      "creatorsLab": "ক্রিয়েটর্স ল্যাব",
-      "merchandise": "মারচেন্ডাইজ"
+      "aboutUs": "About Us",
+      "theProcess": "The Process",
+      "eligibility": "Eligibility",
+      "pricing": "Pricing",
+      "applyNow": "Apply Now",
+      "creatorLogin": "Creator Login",
+      "creatorsLab": "Creators Lab",
+      "merchandise": "Merchandise"
+    },
+    "hero": {
+      "badge": "“সৃষ্টিশীল অর্থনীতিকে শক্তিশালী করা”",
+      "heading1": "আপনার উন্নতি করুন",
+      "heading2": "সৃজনশীল যাত্রা",
+      "description": "যাচাইকৃত ক্রিয়েটরদের পেশাগত উন্নতির দ্বার উন্মোচনের সেরা প্ল্যাটফর্ম। বিশ্বব্যাপী সুযোগের সাথে যুক্ত হন এবং আপনার প্রভাবকে পেশাদারী রূপ দিন।",
+      "joinWhatsApp": "Join WhatsApp Channel",
+      "applyToJoin": "Apply to Join",
+      "signIn": "Sign In / Create Account",
+      "viewBenefits": "View Benefits"
+    },
+    "aboutUs": {
+      "title": "About C3A",
+      "intro1": "C3A-এর পূর্ণরূপ হলো কন্টেন্ট ক্রিয়েটরস কালেক্টিভ অ্যাসোসিয়েশন — এটি একটি কমিউনিটি-চালিত প্ল্যাটফর্ম যা প্রতিভাবান ক্রিয়েটর এবং খাঁটি অংশীদারিত্বের সন্ধানে থাকা বিশ্বব্যাপী ব্র্যান্ডগুলোর মধ্যে সেতুবন্ধন তৈরি করে।",
+      "intro2": "আমরা একটি সহজ বিশ্বাস নিয়ে প্রতিষ্ঠিত হয়েছিলাম: স্রষ্টা অর্থনীতি তখনই বিকশিত হয়, যখন স্রষ্টারা সঠিক উপকরণ, নেটওয়ার্ক এবং সুযোগ পায়, যার মাধ্যমে তারা তাদের আগ্রহকে একটি টেকসই পেশায় রূপান্তর করতে পারে।",
+      "intro3": "অনেক নির্মাতাই সেরা সুযোগ এবং পেশাগত উন্নয়নের অভাবে একাকীত্বে ভুগে থাকেন। একই সময়ে, ব্র্যান্ডগুলো খাঁটি কণ্ঠস্বরের জন্য নিরন্তর অনুসন্ধান করে। এই অসামঞ্জস্যের সমাধান করতেই আমরা C3A তৈরি করেছি।",
+      "mission": "আমাদের লক্ষ্য",
+      "missionDesc": "প্রিমিয়াম অংশীদারিত্ব, পেশাগত উন্নয়ন এবং সমমনা ব্যক্তিদের একটি সমৃদ্ধশালী কমিউনিটিতে বিশেষ সুযোগ প্রদানের মাধ্যমে বিশ্বজুড়ে নির্মাতাদের ক্ষমতায়ন করা।",
+      "whyExist": "আমাদের অস্তিত্বের কারণ",
+      "whyExistDesc": "ক্রিয়েটর ইকোনমি দ্রুতগতিতে প্রসারিত হচ্ছে, কিন্তু অনেক প্রতিভাবান ক্রিয়েটর তাদের প্রাপ্য প্ল্যাটফর্ম এবং স্বীকৃতি থেকে বঞ্চিত। আমাদের লক্ষ্য হলো এই প্রতিযোগিতার ক্ষেত্রকে সকলের জন্য সমান করা এবং প্রত্যেক ক্রিয়েটরের জন্য, তাদের বর্তমান ফলোয়ার সংখ্যা নির্বিশেষে, অর্থপূর্ণ সুযোগ তৈরি করা।",
+      "whatWeOffer": "আমরা যা অফার করি",
+      "brandPartnerships": "ব্র্যান্ড অংশীদারিত্ব",
+      "brandPartnershipsDesc": "আপনার বিষয়বস্তু এবং মূল্যবোধের সাথে সামঞ্জস্যপূর্ণ, যত্নসহকারে নির্বাচিত ব্র্যান্ড অংশীদারিত্বের সুযোগে সরাসরি প্রবেশাধিকার।",
+      "professionalDevelopment": "পেশাগত উন্নয়ন",
+      "professionalDevelopmentDesc": "আপনার চ্যানেল ও মনিটাইজেশন কৌশল উন্নত করতে সাহায্য করার জন্য ওয়ার্কশপ, মেন্টরশিপ এবং রিসোর্স।",
+      "communitySu pport": "সম্প্রদায় সমর্থন",
+      "communitySupportDesc": "আমাদের এই সমৃদ্ধ কমিউনিটিতে অন্যান্য নির্মাতাদের সাথে সংযোগ স্থাপন করুন, নিজেদের মতামত বিনিময় করুন এবং বিভিন্ন প্রকল্পে একসাথে কাজ করুন।",
+      "legalHelp": "Legal Help Team",
+      "legalHelpDesc": "Get creator-focused guidance on contracts, usage rights, brand terms, and dispute support from our legal help team.",
+      "regionalDirectory": "Regional Creators Directory",
+      "regionalDirectoryDesc": "Discover and collaborate with impact creators by language and region through our curated regional creators directory.",
+      "campaignSupport": "Campaign Production Support",
+      "campaignSupportDesc": "End-to-end assistance for planning, scripting, and delivering creator-brand campaigns with stronger storytelling and impact.",
+      "revenueGuidance": "Revenue & Tax Guidance",
+      "revenueGuidanceDesc": "Practical guidance on invoicing, payment workflows, and creator income basics so you can grow with financial clarity.",
+      "collaborationCircles": "Collaboration Circles",
+      "collaborationCirclesDesc": "Curated peer groups where creators co-create, exchange feedback, and launch mission-aligned projects together."
+    },
+    "creatorFit": {
+      "title": "Who We Partner With",
+      "description": "We partner with creators who inspire change, amplify important voices, and use content to create meaningful social good.",
+      "purposeDriven": "Purpose-Driven Storytelling",
+      "purposeDrivenDesc": "Creators whose work educates, uplifts, and motivates communities toward positive action.",
+      "originalVoice": "Original Voice",
+      "originalVoiceDesc": "Creators who communicate authentically and represent their values with honesty and consistency.",
+      "communityLeadership": "Community Leadership",
+      "communityLeadershipDesc": "Creators who foster respectful conversations and contribute to a safe, inclusive creator ecosystem.",
+      "ourCriteria": "আমাদের মানদণ্ড",
+      "socialImpact": "Social Impact Focus",
+      "socialImpactValue": "Required",
+      "authenticity": "Authenticity & Integrity",
+      "authenticityValue": "Essential",
+      "communityValues": "Positive Community Values",
+      "communityValuesValue": "Core Standard",
+      "applicationStatus": "Application Status",
+      "applicationStatusValue": "Open to All Impact Creators"
+    },
+    "howItWorks": {
+      "title": "“যোগদানের ধাপসমূহ”/“অনবোর্ডিং পথ”",
+      "subtitle": "আপনার প্ল্যাটফর্মকে পেশাদারী রূপ দেওয়ার একটি সহজ চার-ধাপের প্রক্রিয়া।",
+      "step1": "জমা দেওয়া",
+      "step1Desc": "প্রাথমিক বাছাইয়ের জন্য আপনার সোশ্যাল মিডিয়া লিঙ্ক এবং দর্শকদের জনতাত্ত্বিক তথ্য প্রদান করুন।",
+      "step2": "পর্যালোচনা",
+      "step2Desc": "আমাদের দল কন্টেন্টের গুণমান এবং নির্ভরযোগ্য এনগেজমেন্ট মেট্রিক্স মূল্যায়ন করে।",
+      "step3": "Selection",
+      "step3Desc": "Creators undergo filtering and checks to ensure alignment with our community values and standards.",
+      "step4": "বৃদ্ধি",
+      "step4Desc": "Gain access to exclusive campaigns and high-value partnerships along with support from our creator success team."
+    },
+    "membership": {
+      "title": "Membership",
+      "subtitle": "Subscriptions",
+      "description": "আপনার সৃজনশীলতার যাত্রার জন্য উপযুক্ত প্ল্যানটি বেছে নিন। আপনার অগ্রগতির সাথে সাথে যেকোনো সময় আপগ্রেড করুন।",
+      "starter": {
+        "name": "স্টার্টার",
+        "price": "₹10",
+        "period": "/month",
+        "description": "যারা সবেমাত্র তাদের যাত্রা শুরু করছেন, সেইসব উদীয়মান নির্মাতাদের জন্য উপযুক্ত।",
+        "eligibility": "Open to all eligible creators",
+        "cta": "শুরু করুন"
+      },
+      "professional": {
+        "name": "পেশাদার",
+        "price": "₹60",
+        "period": "/month",
+        "description": "ক্রমবর্ধমান নির্মাতাদের জন্য যারা তাদের প্রভাব প্রসারিত করতে চান",
+        "eligibility": "Requires 3 months of active Starter membership",
+        "cta": "পেশাদার নির্বাচন করুন"
+      },
+      "elite": {
+        "name": "অভিজাত",
+        "price": "₹120",
+        "period": "/month",
+        "description": "প্রতিষ্ঠিত নির্মাতাদের জন্য যারা তাদের বিকাশের সম্ভাবনাকে সর্বোচ্চ পর্যায়ে নিয়ে যেতে চান।",
+        "eligibility": "Requires 6 months of active Starter membership",
+        "cta": "“সর্বোচ্চ স্তরে উঠো”"
+      },
+      "whatIncluded": "কী কী অন্তর্ভুক্ত আছে",
+      "mostPopular": "সর্বাধিক জনপ্রিয়",
+      "comingSoon": "Coming Soon",
+      "merchandise": "Official C3A Branded Merch",
+      "merchandiseDesc": "Limited-edition creator merchandise designed for community pride and on-ground events. Early access will be offered to active members.",
+      "dropsAnnouncedSoon": "Drops Announced Soon"
     },
     "creatorsLab": {
-      "title": "ক্রিয়েটর্স ল্যাব",
-      "description": "স্রষ্টাদের জন্য রিসোর্স, ওয়ার্কশপ এবং সহযোগিতার টুলস।"
+      "title": "Creators Lab",
+      "description": "Resources, workshops and tools to help creators prototype, learn, and collaborate."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions from creators joining C3A.",
+      "q1": "Who can apply to join C3A?",
+      "a1": "Any creator focused on authentic content and positive social impact can apply, regardless of follower count.",
+      "q2": "How long does the application review take?",
+      "a2": "Most applications are reviewed within 5 business days. You will be contacted by our team with the next steps.",
+      "q3": "Do you support regional-language creators?",
+      "a3": "Yes. C3A actively supports creators across Indian languages and regions through community and collaboration opportunities.",
+      "q4": "What kind of support does C3A provide?",
+      "a4": "Members get access to partnerships, growth resources, legal help guidance, and a creator-first support network.",
+      "q5": "Can I upgrade my membership later?",
+      "a5": "Yes. You can start with Starter and become eligible for Professional and Elite based on membership duration requirements."
+    },
+    "form": {
+      "title": "Creator Profile Submission",
+      "subtitle": "Share your details to be considered for premium C3A opportunities.",
+      "submitted": "Profile Submitted!",
+      "submittedMsg": "Thank you for submitting your profile. Our team will review it and respond shortly.",
+      "submittedMsgWithName": "Thank you, {{name}}. Your profile has been received and our team will reach out shortly.",
+      "fullName": "সম্পূৰ্ণ নাম",
+      "nationality": "Nationality",
+      "street": "Street Address",
+      "city": "City",
+      "state": "State",
+      "country": "Country",
+      "postalCode": "Postal Code",
+      "phone": "Phone Number",
+      "email": "ইমেইল ঠিকানা",
+      "age": "Age",
+      "contentType": "Content Type",
+      "submitButton": "আবেদন জমা দিন",
+      "highVolume": "কাজের চাপ বেশি থাকার কারণে, আমাদের টিম সাধারণত ৫ কার্যদিবসের মধ্যে উত্তর দিয়ে থাকে।"
+    },
+    "footer": {
+      "support": "সমর্থন",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact",
+      "copyright": "© 2024 C3A PLATFORM. ALL RIGHTS RESERVED. EMPOWERING THE CREATOR ECONOMY."
     }
   },
   "as": {
     "header": {
-      "aboutUs": "আমালোকৰ বিষয়ে",
-      "theProcess": "প্ৰক্ৰিয়া",
-      "eligibility": "যোগ্যতা",
-      "pricing": "মূল্য",
-      "applyNow": "এতিয়া আবেদন কৰক",
-      "creatorLogin": "সৃষ্টিকৰ্তা লগইন",
-      "creatorsLab": "ক্ৰিয়েটৰ্ছ লেব",
-      "merchandise": "মাৰ্চেন্ডাইজ"
+      "aboutUs": "About Us",
+      "theProcess": "The Process",
+      "eligibility": "Eligibility",
+      "pricing": "Pricing",
+      "applyNow": "Apply Now",
+      "creatorLogin": "Creator Login",
+      "creatorsLab": "Creators Lab",
+      "merchandise": "Merchandise"
+    },
+    "hero": {
+      "badge": "“সৃষ্টিশীল অৰ্থনীতিক সবল কৰা”",
+      "heading1": "আপোনাৰ উন্নীত কৰক",
+      "heading2": "সৃষ্টিশীল যাত্ৰা",
+      "description": "পেছাদাৰী বৃদ্ধি আনলক কৰিবলৈ পৰীক্ষিত সৃষ্টিকৰ্তাৰ বাবে প্ৰিমিয়াৰ প্লেটফৰ্ম। বিশ্বব্যাপী সুযোগৰ সৈতে সংযোগ স্থাপন কৰক আৰু আপোনাৰ প্ৰভাৱ পেছাদাৰী কৰক।",
+      "joinWhatsApp": "Join WhatsApp Channel",
+      "applyToJoin": "Apply to Join",
+      "signIn": "Sign In / Create Account",
+      "viewBenefits": "View Benefits"
+    },
+    "aboutUs": {
+      "title": "About C3A",
+      "intro1": "C3A ৰ পূৰ্ণৰূপ হৈছে Content Creators Collective Association — এটা সম্প্ৰদায়-চালিত প্লেটফৰ্ম, যিয়ে প্ৰতিভাশালী সৃষ্টিকৰ্তাসকল আৰু প্ৰামাণিক অংশীদাৰিত্ব বিচৰা বিশ্বব্যাপী ব্ৰেণ্ডসমূহৰ মাজৰ ব্যৱধান পূৰণ কৰে।",
+      "intro2": "আমি এটা সৰল বিশ্বাসৰে প্ৰতিষ্ঠা হৈছিলোঁ: সৃষ্টিকৰ্তা অৰ্থনীতি তেতিয়াই বিকাশ লাভ কৰে যেতিয়া সৃষ্টিকৰ্তাসকলক সঠিক সঁজুলি, নেটৱৰ্ক আৰু সুযোগ প্ৰদান কৰা হয়, যাৰ জৰিয়তে তেওঁলোকে নিজৰ আবেগক এক টেকসই পেছাত পৰিণত কৰিব পাৰে।",
+      "intro3": "অসংখ্য সৃষ্টিকৰ্তা একাকীত্বত সংগ্ৰাম কৰি আছে, উন্নত সুযোগ আৰু পেছাগত উন্নয়নৰ প্ৰৱেশাধিকাৰ নাপাই। আনহাতে, ব্ৰেণ্ডসমূহে সদায়ে প্ৰামাণিক কণ্ঠৰ সন্ধান কৰে। এই বিচ্ছিন্নতা দূৰ কৰিবলৈ আমি C3A সৃষ্টি কৰিছিলোঁ।",
+      "mission": "আমাৰ মিছন",
+      "missionDesc": "বিশ্বজুৰি সৃষ্টিকৰ্তাসকলক শক্তিশালী কৰা, প্ৰিমিয়াম অংশীদাৰিত্ব, পেছাগত উন্নয়ন আৰু সমমনাসম্পন্ন ব্যক্তিসকলৰ এক সজীৱ সমাজলৈ বিশেষ প্ৰৱেশাধিকাৰ প্ৰদান কৰি।",
+      "whyExist": "আমি কিয় অস্তিত্ব লাভ কৰো",
+      "whyExistDesc": "সৃষ্টিকৰ্তা অৰ্থনীতি দ্ৰুতগতিত বৃদ্ধি পাইছে যদিও বহু প্ৰতিভাৱান সৃষ্টিকৰ্তাৰ প্ৰাপ্য মঞ্চ আৰু স্বীকৃতিৰ অভাৱ। আমি খেলপথাৰখন সমতল কৰিবলৈ আৰু প্ৰতিজন সৃষ্টিকৰ্তাৰ বাবে অৰ্থপূৰ্ণ সুযোগ সৃষ্টি কৰিবলৈ অস্তিত্ব লাভ কৰিছো, তেওঁলোকৰ বৰ্তমানৰ অনুগামীৰ সংখ্যা যিয়েই নহওক কিয়।",
+      "whatWeOffer": "আমি কি আগবঢ়াইছো",
+      "brandPartnerships": "ব্ৰেণ্ড অংশীদাৰিত্ব",
+      "brandPartnershipsDesc": "আপোনাৰ বিষয়বস্তু আৰু মূল্যবোধৰ সৈতে সংগতি ৰাখি সযতনে সংৰক্ষিত ব্ৰেণ্ড অংশীদাৰিত্বৰ সুযোগসমূহৰ প্ৰত্যক্ষ প্ৰৱেশ।",
+      "professionalDevelopment": "পেছাদাৰী বিকাশ",
+      "professionalDevelopmentDesc": "আপোনাৰ চেনেল আৰু মুদ্ৰাকৰণ কৌশল বৃদ্ধি কৰাত সহায় কৰিবলৈ কৰ্মশালা, মেণ্টৰশ্বিপ, আৰু সম্পদ।",
+      "communitySu pport": "সম্প্ৰদায়ৰ সমৰ্থন",
+      "communitySupportDesc": "সহযোগী সৃষ্টিকৰ্তাসকলৰ সৈতে সংযোগ স্থাপন কৰক, অন্তৰ্দৃষ্টিসমূহ ভাগ-বতৰা কৰক, আৰু আমাৰ সমৃদ্ধিশালী সম্প্ৰদায়ৰ ভিতৰত প্ৰকল্পসমূহত সহযোগিতা কৰক।",
+      "legalHelp": "Legal Help Team",
+      "legalHelpDesc": "Get creator-focused guidance on contracts, usage rights, brand terms, and dispute support from our legal help team.",
+      "regionalDirectory": "Regional Creators Directory",
+      "regionalDirectoryDesc": "Discover and collaborate with impact creators by language and region through our curated regional creators directory.",
+      "campaignSupport": "Campaign Production Support",
+      "campaignSupportDesc": "End-to-end assistance for planning, scripting, and delivering creator-brand campaigns with stronger storytelling and impact.",
+      "revenueGuidance": "Revenue & Tax Guidance",
+      "revenueGuidanceDesc": "Practical guidance on invoicing, payment workflows, and creator income basics so you can grow with financial clarity.",
+      "collaborationCircles": "Collaboration Circles",
+      "collaborationCirclesDesc": "Curated peer groups where creators co-create, exchange feedback, and launch mission-aligned projects together."
+    },
+    "creatorFit": {
+      "title": "Who We Partner With",
+      "description": "We partner with creators who inspire change, amplify important voices, and use content to create meaningful social good.",
+      "purposeDriven": "Purpose-Driven Storytelling",
+      "purposeDrivenDesc": "Creators whose work educates, uplifts, and motivates communities toward positive action.",
+      "originalVoice": "Original Voice",
+      "originalVoiceDesc": "Creators who communicate authentically and represent their values with honesty and consistency.",
+      "communityLeadership": "Community Leadership",
+      "communityLeadershipDesc": "Creators who foster respectful conversations and contribute to a safe, inclusive creator ecosystem.",
+      "ourCriteria": "আমাৰ মাপকাঠী",
+      "socialImpact": "Social Impact Focus",
+      "socialImpactValue": "Required",
+      "authenticity": "Authenticity & Integrity",
+      "authenticityValue": "Essential",
+      "communityValues": "Positive Community Values",
+      "communityValuesValue": "Core Standard",
+      "applicationStatus": "Application Status",
+      "applicationStatusValue": "Open to All Impact Creators"
+    },
+    "howItWorks": {
+      "title": "“যোগদানৰ ধাপসমূহ”/“অন্তৰ্ভুক্তি পথ”",
+      "subtitle": "আপোনাৰ প্লেটফৰ্মক পেছাদাৰী কৰিবলৈ এটা সহজ চাৰি-পদক্ষেপৰ প্ৰক্ৰিয়া।",
+      "step1": "দাখিল কৰা",
+      "step1Desc": "প্ৰাৰম্ভিক প্ৰদৰ্শনৰ বাবে আপোনাৰ সামাজিক সংযোগ আৰু দৰ্শকৰ জনগাঁথনি প্ৰদান কৰক।",
+      "step2": "পুনৰীক্ষণ",
+      "step2Desc": "আমাৰ দলটোৱে বিষয়বস্তুৰ মানদণ্ড আৰু প্ৰামাণিক নিয়োজিত মেট্ৰিক্সৰ মূল্যায়ন কৰে।",
+      "step3": "Selection",
+      "step3Desc": "Creators undergo filtering and checks to ensure alignment with our community values and standards.",
+      "step4": "বৃদ্ধি",
+      "step4Desc": "Gain access to exclusive campaigns and high-value partnerships along with support from our creator success team."
+    },
+    "membership": {
+      "title": "Membership",
+      "subtitle": "Subscriptions",
+      "description": "আপোনাৰ সৃষ্টিকৰ্তা যাত্ৰাৰ লগত খাপ খোৱা পৰিকল্পনা বাছক। বৃদ্ধিৰ লগে লগে যিকোনো সময়তে স্কেল আপ কৰক।",
+      "starter": {
+        "name": "ষ্টাৰ্টাৰ",
+        "price": "₹10",
+        "period": "/month",
+        "description": "মাত্ৰ যাত্ৰা আৰম্ভ কৰা উদীয়মান সৃষ্টিকৰ্তাসকলৰ বাবে একেবাৰে উপযুক্ত",
+        "eligibility": "Open to all eligible creators",
+        "cta": "আৰম্ভ কৰক"
+      },
+      "professional": {
+        "name": "পেশাদাৰী",
+        "price": "₹60",
+        "period": "/month",
+        "description": "তেওঁলোকৰ প্ৰভাৱ স্কেল কৰিবলৈ বিচৰা ক্ৰমবৰ্ধমান সৃষ্টিকৰ্তাৰ বাবে",
+        "eligibility": "Requires 3 months of active Starter membership",
+        "cta": "পেছাদাৰী বাছক"
+      },
+      "elite": {
+        "name": "অভিজাত শ্ৰেণী",
+        "price": "₹120",
+        "period": "/month",
+        "description": "প্ৰতিষ্ঠিত সৃষ্টিকৰ্তাসকলৰ বাবে তেওঁলোকৰ বৃদ্ধিৰ সম্ভাৱনা সৰ্বাধিক কৰা",
+        "eligibility": "Requires 6 months of active Starter membership",
+        "cta": "এলিটলৈ যাওক"
+      },
+      "whatIncluded": "কি অন্তৰ্ভুক্ত কৰা হৈছে",
+      "mostPopular": "সর্বাধিক জনপ্রিয়",
+      "comingSoon": "Coming Soon",
+      "merchandise": "Official C3A Branded Merch",
+      "merchandiseDesc": "Limited-edition creator merchandise designed for community pride and on-ground events. Early access will be offered to active members.",
+      "dropsAnnouncedSoon": "Drops Announced Soon"
     },
     "creatorsLab": {
-      "title": "ক্ৰিয়েটৰ্ছ লেব",
-      "description": "সৃষ্টিকৰ্তাসকলৰ বাবে সম্পদ, কর্মশালা আৰু সহযোগিতাৰ টুলছ।"
+      "title": "Creators Lab",
+      "description": "Resources, workshops and tools to help creators prototype, learn, and collaborate."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions from creators joining C3A.",
+      "q1": "Who can apply to join C3A?",
+      "a1": "Any creator focused on authentic content and positive social impact can apply, regardless of follower count.",
+      "q2": "How long does the application review take?",
+      "a2": "Most applications are reviewed within 5 business days. You will be contacted by our team with the next steps.",
+      "q3": "Do you support regional-language creators?",
+      "a3": "Yes. C3A actively supports creators across Indian languages and regions through community and collaboration opportunities.",
+      "q4": "What kind of support does C3A provide?",
+      "a4": "Members get access to partnerships, growth resources, legal help guidance, and a creator-first support network.",
+      "q5": "Can I upgrade my membership later?",
+      "a5": "Yes. You can start with Starter and become eligible for Professional and Elite based on membership duration requirements."
+    },
+    "form": {
+      "title": "Creator Profile Submission",
+      "subtitle": "Share your details to be considered for premium C3A opportunities.",
+      "submitted": "Profile Submitted!",
+      "submittedMsg": "Thank you for submitting your profile. Our team will review it and respond shortly.",
+      "submittedMsgWithName": "Thank you, {{name}}. Your profile has been received and our team will reach out shortly.",
+      "fullName": "সম্পূৰ্ণ নাম",
+      "nationality": "Nationality",
+      "street": "Street Address",
+      "city": "City",
+      "state": "State",
+      "country": "Country",
+      "postalCode": "Postal Code",
+      "phone": "Phone Number",
+      "email": "ইমেইল ঠিকনা",
+      "age": "Age",
+      "contentType": "Content Type",
+      "submitButton": "আবেদন জমা দিয়ক",
+      "highVolume": "উচ্চ ভলিউমৰ বাবে আমাৰ দলটোৱে সাধাৰণতে ৫ ব্যৱসায়িক দিনৰ ভিতৰত সঁহাৰি দিয়ে।"
+    },
+    "footer": {
+      "support": "সমৰ্থন",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact",
+      "copyright": "© 2024 C3A PLATFORM. ALL RIGHTS RESERVED. EMPOWERING THE CREATOR ECONOMY."
     }
   }
 }
