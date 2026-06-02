@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { scrollToSection } from '../lib/scrollToSection';
 import { useLanguage } from '../context/LanguageContext';
+import { useState } from 'react';
+import MobileNav from './MobileNav';
 
 function Header() {
     const { t, changeLanguage, language } = useLanguage();
@@ -9,6 +11,8 @@ function Header() {
         e.preventDefault();
         scrollToSection(targetId);
     };
+
+    const [showMobile, setShowMobile] = useState(false);
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-sand/90 backdrop-blur-md">
@@ -88,6 +92,17 @@ function Header() {
                         {t('header.creatorLogin')}
                     </Link>
                 </nav>
+                {/* Mobile menu button */}
+                <div className="md:hidden flex items-center">
+                    <button aria-label="Open menu" onClick={() => setShowMobile(true)} className="p-2 rounded-md hover:bg-charcoal/5">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-charcoal">
+                            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                {showMobile && (
+                    <MobileNav t={t} language={language} changeLanguage={(l)=>{ changeLanguage(l); setShowMobile(false); }} onClose={() => setShowMobile(false)} />
+                )}
             </div>
         </header>
     );
