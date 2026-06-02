@@ -22,12 +22,20 @@ export function LanguageProvider({ children }) {
   const t = (key) => {
     const keys = key.split('.');
     let value = translations[language];
-    
+
     for (const k of keys) {
       value = value?.[k];
     }
-    
-    return value || key;
+
+    if (value !== undefined && value !== null) return value;
+
+    // Fallback to English for any missing keys
+    let fallback = translations['en'];
+    for (const k of keys) {
+      fallback = fallback?.[k];
+    }
+
+    return fallback || key;
   };
 
   return (
