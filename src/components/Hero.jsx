@@ -17,13 +17,13 @@ function Hero() {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div>
                             <p className="text-xs font-extrabold tracking-widest uppercase text-emerald-700 mb-2">
-                                Updates Coming Soon
+                                {t('hero.updatesComingSoon')}
                             </p>
                             <h2 className="text-lg md:text-2xl font-extrabold text-charcoal leading-tight">
-                                Follow the channel for more
+                                {t('hero.followChannel')}
                             </h2>
                             <p className="mt-2 text-sm md:text-base text-charcoal/75 leading-relaxed">
-                                We are working on bringing more interactions with our creators
+                                {t('hero.followDesc')}
                             </p>
                         </div>
                         <a
@@ -41,8 +41,8 @@ function Hero() {
                     {t('hero.badge')}
                 </span>
                 <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] text-charcoal">
-                    {t('hero.heading1')} <br />
-                    <span className="text-saffron">{t('hero.heading2')}</span>
+                    {t('hero.heading1')}
+                    <span className="block mt-3 md:mt-4 text-saffron">{t('hero.heading2')}</span>
                 </h1>
                 <p className="text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto mb-12 leading-relaxed">
                     {t('hero.description')}
