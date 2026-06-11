@@ -99,7 +99,7 @@ function AboutUs() {
                             <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mx-auto mb-6">
                                 <span className="material-symbols-outlined text-3xl text-blue-600">groups</span>
                             </div>
-                            <h4 className="text-lg font-bold mb-3 text-charcoal">{t('aboutUs.communitySu pport')}</h4>
+                            <h4 className="text-lg font-bold mb-3 text-charcoal">{t('aboutUs.communitySupport')}</h4>
                             <p className="text-charcoal/60">
                                 {t('aboutUs.communitySupportDesc')}
                             </p>

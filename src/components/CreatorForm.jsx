@@ -405,7 +405,7 @@ function CreatorForm() {
                                 <div className="flex gap-3 items-start">
                                     <span className="material-symbols-outlined text-blue-600 mt-0.5">verified</span>
                                     <p className="text-xs text-charcoal/60 leading-relaxed">
-                                        Your information is used only for creator program evaluation and partnership matching.
+                                        {t('form.verificationNote')}
                                     </p>
                                 </div>
                             </div>
