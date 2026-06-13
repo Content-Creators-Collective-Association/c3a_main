@@ -74,7 +74,7 @@ function Header() {
                     <select
                         value={language}
                         onChange={(e) => changeLanguage(e.target.value)}
-                        className="ml-2 text-sm font-semibold text-charcoal/70 bg-transparent border border-charcoal/10 rounded px-2 py-1"
+                        className="ml-auto appearance-none text-sm font-semibold text-charcoal/70 bg-transparent border border-charcoal/10 rounded pl-2 pr-8 py-1"
                         aria-label="Language selector"
                     >
                         <option value="en">English</option>
