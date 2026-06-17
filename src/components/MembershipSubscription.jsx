@@ -2,63 +2,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 function MembershipSubscription() {
     const { t } = useLanguage();
-    const subscriptionPlans = [
-        {
-            nameKey: 'membership.starter.name',
-            price: '₹10',
-            period: '/month',
-            descriptionKey: 'membership.starter.description',
-            eligibilityKey: 'membership.starter.eligibility',
-            features: [
-                'Access to C3A community',
-                'Monthly brand opportunity alerts',
-                'Basic analytics dashboard',
-                'Email support',
-                'Portfolio verification badge'
-            ],
-            ctaKey: 'membership.starter.cta',
-            highlighted: false
-        },
-        {
-            nameKey: 'membership.professional.name',
-            price: '₹60',
-            period: '/month',
-            descriptionKey: 'membership.professional.description',
-            eligibilityKey: 'membership.professional.eligibility',
-            features: [
-                'Everything in Starter',
-                'Priority brand partnership access',
-                'Advanced analytics & insights',
-                'One-on-one strategy consultation (monthly)',
-                'Content optimization tools',
-                'Priority email & chat support',
-                'Exclusive professional network events',
-                'Negotiation assistance for contracts'
-            ],
-            ctaKey: 'membership.professional.cta',
-            highlighted: true
-        },
-        {
-            nameKey: 'membership.elite.name',
-            price: '₹120',
-            period: '/month',
-            descriptionKey: 'membership.elite.description',
-            eligibilityKey: 'membership.elite.eligibility',
-            features: [
-                'Everything in Professional',
-                'Dedicated account manager',
-                'White-glove brand placement service',
-                'Custom campaign strategy development',
-                'Revenue optimization consulting',
-                'VIP-only partnership opportunities',
-                'Monthly live strategy sessions',
-                '24/7 priority support',
-                'Legal & contract review support'
-            ],
-            ctaKey: 'membership.elite.cta',
-            highlighted: false
-        }
-    ];
+    const subscriptionPlans = t('subPlans');
 
     return (
         <section className="py-24 fade-in-section" id="membership-subscriptions">

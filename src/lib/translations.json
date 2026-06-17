@@ -161,7 +161,64 @@
       "terms": "Terms",
       "contact": "Contact",
       "copyright": "© 2024 C3A PLATFORM. ALL RIGHTS RESERVED. EMPOWERING THE CREATOR ECONOMY."
-    }
+    },
+    "subPlans": [
+      {
+        "nameKey": "membership.starter.name",
+        "price": "₹10",
+        "period": "/month",
+        "descriptionKey": "membership.starter.description",
+        "eligibilityKey": "membership.starter.eligibility",
+        "features": [
+          "Access to C3A community",
+          "Monthly brand opportunity alerts",
+          "Basic analytics dashboard",
+          "Email support",
+          "Portfolio verification badge"
+        ],
+        "ctaKey": "membership.starter.cta",
+        "highlighted": false
+      },
+      {
+        "nameKey": "membership.professional.name",
+        "price": "₹60",
+        "period": "/month",
+        "descriptionKey": "membership.professional.description",
+        "eligibilityKey": "membership.professional.eligibility",
+        "features": [
+          "Everything in Starter",
+          "Priority brand partnership access",
+          "Advanced analytics & insights",
+          "One-on-one strategy consultation (monthly)",
+          "Content optimization tools",
+          "Priority email & chat support",
+          "Exclusive professional network events",
+          "Negotiation assistance for contracts"
+        ],
+        "ctaKey": "membership.professional.cta",
+        "highlighted": true
+      },
+      {
+        "nameKey": "membership.elite.name",
+        "price": "₹120",
+        "period": "/month",
+        "descriptionKey": "membership.elite.description",
+        "eligibilityKey": "membership.elite.eligibility",
+        "features": [
+          "Everything in Professional",
+          "Dedicated account manager",
+          "White-glove brand placement service",
+          "Custom campaign strategy development",
+          "Revenue optimization consulting",
+          "VIP-only partnership opportunities",
+          "Monthly live strategy sessions",
+          "24/7 priority support",
+          "Legal & contract review support"
+        ],
+        "ctaKey": "membership.elite.cta",
+        "highlighted": false
+      }
+    ]
   },
   "gu": {
     "header": {
@@ -326,7 +383,64 @@
       "terms": "શરતો",
       "contact": "સંપર્ક",
       "copyright": "© 2026 C3A પ્લેટફોર્મ. બધા અધિકારો આરક્ષિત. સર્જક અર્થતંત્રને સશક્ત બનાવવું."
-    } 
+    },
+    "subPlans": [
+  {
+    "nameKey": "membership.starter.name",
+    "price": "₹10",
+    "period": "/month",
+    "descriptionKey": "membership.starter.description",
+    "eligibilityKey": "membership.starter.eligibility",
+    "features": [
+      "C3A સમુદાય સુધી પહોંચ",
+      "માસિક બ્રાન્ડ તક ચેતવણીઓ",
+      "મૂળભૂત વિશ્લેષણ ડેશબોર્ડ",
+      "ઇમેઇલ સપોર્ટ",
+      "પોર્ટફોલિયો વેરિફિકેશન બેજ"
+    ],
+    "ctaKey": "membership.starter.cta",
+    "highlighted": false
+  },
+  {
+    "nameKey": "membership.professional.name",
+    "price": "₹60",
+    "period": "/month",
+    "descriptionKey": "membership.professional.description",
+    "eligibilityKey": "membership.professional.eligibility",
+    "features": [
+      "સ્ટાર્ટરમાં બધું જ સામેલ છે",
+      "પ્રાથમિક બ્રાન્ડ ભાગીદારી એક્સેસ",
+      "અદ્યતન વિશ્લેષણ અને આંતરદૃષ્ટિ",
+      "વન-ઓન-વન વ્યૂહરચના પરામર્શ (માસિક)",
+      "સામગ્રી ઑપ્ટિમાઇઝેશન સાધનો",
+      "પ્રાથમિક ઇમેઇલ અને ચેટ સપોર્ટ",
+      "વિશિષ્ટ વ્યાવસાયિક નેટવર્ક ઇવેન્ટ્સ",
+      "કરારો માટે વાટાઘાટોમાં સહાય"
+    ],
+    "ctaKey": "membership.professional.cta",
+    "highlighted": true
+  },
+  {
+    "nameKey": "membership.elite.name",
+    "price": "₹120",
+    "period": "/month",
+    "descriptionKey": "membership.elite.description",
+    "eligibilityKey": "membership.elite.eligibility",
+    "features": [
+      "પ્રોફેશનલમાં બધું જ સામેલ છે",
+      "સમર્પિત એકાઉન્ટ મેનેજર",
+      "વ્હાઇટ-ગ્લોવ બ્રાન્ડ પ્લેસમેન્ટ સેવા",
+      "કસ્ટમ ઝુંબેશ વ્યૂહરચના વિકાસ",
+      "મહેસૂલ ઓપ્ટિમાઇઝેશન કન્સલ્ટિંગ",
+      "VIP-માત્ર ભાગીદારીની તકો",
+      "માસિક લાઈવ વ્યૂહરચના સત્રો",
+      "24/7 પ્રાથમિક સપોર્ટ",
+      "કાનૂની અને કરાર સમીક્ષા સપોર્ટ"
+    ],
+    "ctaKey": "membership.elite.cta",
+    "highlighted": false
+  }
+]
   },
   "hi": {
     "header": {
@@ -492,7 +606,64 @@
       "terms": "शर्तें",
       "contact": "संपर्क",
       "copyright": "© 2026 C3A प्लेटफ़ॉर्म। सभी अधिकार सुरक्षित। क्रिएटर इकॉनमी को सशक्त बनाना।"
-    }
+    },
+    "subPlans": [
+  {
+    "nameKey": "membership.starter.name",
+    "price": "₹10",
+    "period": "/month",
+    "descriptionKey": "membership.starter.description",
+    "eligibilityKey": "membership.starter.eligibility",
+    "features": [
+      "C3A कम्युनिटी तक पहुंच",
+      "मासिक ब्रांड अवसर अलर्ट",
+      "बुनियादी एनालिटिक्स डैशबोर्ड",
+      "ईमेल सहायता",
+      "पोर्टफोलियो सत्यापन बैज"
+    ],
+    "ctaKey": "membership.starter.cta",
+    "highlighted": false
+  },
+  {
+    "nameKey": "membership.professional.name",
+    "price": "₹60",
+    "period": "/month",
+    "descriptionKey": "membership.professional.description",
+    "eligibilityKey": "membership.professional.eligibility",
+    "features": [
+      "स्ट्रार्टर की सभी सुविधाएं शामिल",
+      "प्राथमिकता ब्रांड साझेदारी पहुंच",
+      "उन्नत एनालिटिक्स और अंतर्दृष्टि",
+      "वन-ऑन-वन रणनीति परामर्श (मासिक)",
+      "सामग्री अनुकूलन उपकरण",
+      "प्राथमिकता ईमेल और चैट सहायता",
+      "विशेष व्यावसायिक नेटवर्क कार्यक्रम",
+      "अनुबंधों के लिए बातचीत सहायता"
+    ],
+    "ctaKey": "membership.professional.cta",
+    "highlighted": true
+  },
+  {
+    "nameKey": "membership.elite.name",
+    "price": "₹120",
+    "period": "/month",
+    "descriptionKey": "membership.elite.description",
+    "eligibilityKey": "membership.elite.eligibility",
+    "features": [
+      "प्रोफेशनल की सभी सुविधाएं शामिल",
+      "समर्पित खाता प्रबंधक",
+      "व्हाइट-ग्लव ब्रांड प्लेसमेंट सेवा",
+      "कस्टम अभियान रणनीति विकास",
+      "राजस्व अनुकूलन परामर्श",
+      "केवल वीआईपी साझेदारी के अवसर",
+      "मासिक लाइव रणनीति सत्र",
+      "24/7 प्राथमिकता सहायता",
+      "कानूनी और अनुबंध समीक्षा सहायता"
+    ],
+    "ctaKey": "membership.elite.cta",
+    "highlighted": false
+  }
+]
   },
   "ta": 
 {
@@ -657,7 +828,64 @@
     "terms": "விதிமுறைகள்",
     "contact": "தொடர்பு",
     "copyright": "© 2026 C3A தளம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. கிரியேட்டர் பொருளாதாரத்தை வலுப்படுத்துகிறோம்."
+  },
+  "subPlans": [
+  {
+    "nameKey": "membership.starter.name",
+    "price": "₹10",
+    "period": "/month",
+    "descriptionKey": "membership.starter.description",
+    "eligibilityKey": "membership.starter.eligibility",
+    "features": [
+      "C3A சமூகத்திற்கான அணுகல்",
+      "மாதாந்திர பிராண்ட் வாய்ப்பு விழிப்பூட்டல்கள்",
+      "அடிப்படை பகுப்பாய்வு டாஷ்போர்டு",
+      "மின்னஞ்சல் ஆதரவு",
+      "போர்ட்ஃபோலியோ சரிபார்ப்பு பேட்ஜ்"
+    ],
+    "ctaKey": "membership.starter.cta",
+    "highlighted": false
+  },
+  {
+    "nameKey": "membership.professional.name",
+    "price": "₹60",
+    "period": "/month",
+    "descriptionKey": "membership.professional.description",
+    "eligibilityKey": "membership.professional.eligibility",
+    "features": [
+      "ஸ்டார்ட்டரில் உள்ள அனைத்தும்",
+      "முன்னுரிமை பிராண்ட் கூட்டாண்மை அணுகல்",
+      "மேம்பட்ட பகுப்பாய்வு மற்றும் நுண்ணறிவு",
+      "ஒருவருக்கு ஒருவர் உத்தி ஆலோசனை (மாதாந்திர)",
+      "உள்ளடக்க உகப்பாக்கக் கருவிகள்",
+      "முன்னுரிமை மின்னஞ்சல் மற்றும் அரட்டை ஆதரவு",
+      "பிரத்யேக தொழில்முறை நெட்வொர்க் நிகழ்வுகள்",
+      "ஒப்பந்தங்களுக்கான பேச்சுவார்த்தை உதவி"
+    ],
+    "ctaKey": "membership.professional.cta",
+    "highlighted": true
+  },
+  {
+    "nameKey": "membership.elite.name",
+    "price": "₹120",
+    "period": "/month",
+    "descriptionKey": "membership.elite.description",
+    "eligibilityKey": "membership.elite.eligibility",
+    "features": [
+      "ப்ரொஃபெஷனலில் உள்ள அனைத்தும்",
+      "பிரத்யேக கணக்கு மேலாளர்",
+      "சிறப்பு பிராண்ட் பிளேஸ்மென்ட் சேவை",
+      "தனிப்பயனாக்கப்பட்ட பிரச்சார உத்தி மேம்பாடு",
+      "வருவாய் உகப்பாக்க ஆலோசனை",
+      "விஐபி-க்கான பிரத்யேக கூட்டாண்மை வாய்ப்புகள்",
+      "மாதாந்திர நேரடி உத்தி அமர்வுகள்",
+      "24/7 முன்னுரிமை ஆதரவு",
+      "சட்டம் மற்றும் ஒப்பந்த ஆய்வு ஆதரவு"
+    ],
+    "ctaKey": "membership.elite.cta",
+    "highlighted": false
   }
+]
 }
 ,
   "bn": 
@@ -823,7 +1051,64 @@
     "terms": "চৰ্তাৱলী",
     "contact": "যোগাযোগ",
     "copyright": "© 2026 C3A প্লেটফৰ্ম। সকলো অধিকাৰ সংৰক্ষিত। ক্ৰিয়েটৰ অৰ্থনীতি শক্তিশালী কৰি তোলা।"
+  },
+  "subPlans": [
+  {
+    "nameKey": "membership.starter.name",
+    "price": "₹10",
+    "period": "/month",
+    "descriptionKey": "membership.starter.description",
+    "eligibilityKey": "membership.starter.eligibility",
+    "features": [
+      "C3A কমিউনিটিতে অ্যাক্সেস",
+      "মাসিক ব্র্যান্ডের সুযোগের অ্যালার্ট",
+      "মৌলিক অ্যানালিটিক্স ড্যাশবোর্ড",
+      "ইমেল সহায়তা",
+      "পোর্টফোলিও যাচাইকরণ ব্যাজ"
+    ],
+    "ctaKey": "membership.starter.cta",
+    "highlighted": false
+  },
+  {
+    "nameKey": "membership.professional.name",
+    "price": "₹60",
+    "period": "/month",
+    "descriptionKey": "membership.professional.description",
+    "eligibilityKey": "membership.professional.eligibility",
+    "features": [
+      "স্টার্টারের সমস্ত সুবিধা অন্তর্ভুক্ত",
+      " can অগ্রাধিকার ব্র্যান্ড অংশীদারিত্ব অ্যাক্সেস",
+      "উন্নত অ্যানালিটিক্স এবং অন্তর্দৃষ্টি",
+      "ওয়ান-অন-ওয়ান কৌশল পরামর্শ (মাসিক)",
+      "কনটেন্ট অপ্টিমাইজেশান সরঞ্জাম",
+      "অগ্রাধিকার ইমেল এবং চ্যাট সহায়তা",
+      "এক্সক্লুসিভ প্রফেশনাল নেটওয়ার্ক ইভেন্ট",
+      "চুক্তির আলোচনার জন্য সহায়তা"
+    ],
+    "ctaKey": "membership.professional.cta",
+    "highlighted": true
+  },
+  {
+    "nameKey": "membership.elite.name",
+    "price": "₹120",
+    "period": "/month",
+    "descriptionKey": "membership.elite.description",
+    "eligibilityKey": "membership.elite.eligibility",
+    "features": [
+      "প্রফেশনালের সমস্ত সুবিধা অন্তর্ভুক্ত",
+      "ডেডিকেটেড অ্যাকাউন্ট ম্যানেজার",
+      "হোয়াইট-গ্লাভ ব্র্যান্ড প্লেসমেন্ট পরিষেবা",
+      "কাস্টম ক্যাম্পেইন কৌশল বিকাশ",
+      "রাজস্ব অপ্টিমাইজেশান পরামর্শ",
+      "শুধুমাত্র ভিআইপি অংশীদারিত্বের সুযোগ",
+      "মাসিক লাইভ কৌশল সেশন",
+      "২৪/৭ অগ্রাধিকার সহায়তা",
+      "আইনি এবং চুক্তি পর্যালোচনা সহায়তা"
+    ],
+    "ctaKey": "membership.elite.cta",
+    "highlighted": false
   }
+]
 }
 ,
   "as": 
@@ -989,7 +1274,64 @@
     "terms": "চৰ্তাৱলী",
     "contact": "যোগাযোগ",
     "copyright": "© 2026 C3A প্লেটফৰ্ম। সকলো অধিকাৰ সংৰক্ষিত। ক্ৰিয়েটৰ অৰ্থনীতি শক্তিশালী কৰি তোলা।"
+  },
+  "subPlans": [
+  {
+    "nameKey": "membership.starter.name",
+    "price": "₹10",
+    "period": "/month",
+    "descriptionKey": "membership.starter.description",
+    "eligibilityKey": "membership.starter.eligibility",
+    "features": [
+      "C3A কমিউনিটীত প্ৰৱেশাধিকাৰ",
+      "মাহেকীয়া ব্ৰেণ্ডৰ সুযোগৰ এলাৰ্ট",
+      "প্ৰাথমিক এনালিটিক্স ডেশ্ববৰ্ড",
+      "ইমেইল সাহায্য",
+      "পৰ্টফলিঅ' সত্যাপন বেজ"
+    ],
+    "ctaKey": "membership.starter.cta",
+    "highlighted": false
+  },
+  {
+    "nameKey": "membership.professional.name",
+    "price": "₹60",
+    "period": "/month",
+    "descriptionKey": "membership.professional.description",
+    "eligibilityKey": "membership.professional.eligibility",
+    "features": [
+      "ষ্টাৰ্টাৰ প্লেনৰ সকলো সুবিধা",
+      "অগ্ৰাধিকাৰ ভিত্তিত ব্ৰেণ্ড অংশীদাৰিত্বৰ প্ৰৱেশাধিকাৰ",
+      "উন্নত এনালিটিক্স আৰু ইনচাইটসমূহ",
+      "ৱান-অন-ৱান ৰণনীতি পৰামৰ্শ (মাহেকীয়া)",
+      "কন্টেন্ট অপ্টিমাইজেশ্যন সঁজুলিসমূহ",
+      "অগ্ৰাধিকাৰ ভিত্তিত ইমেইল আৰু চাট সমৰ্থন",
+      "এক্সক্লুচিভ প্ৰফেচনেল নেটৱৰ্ক ইভেণ্টসমূহ",
+      "চুক্তিৰ বাবে আলোচনা (নেগোচিয়েশ্যন) সাহায্য"
+    ],
+    "ctaKey": "membership.professional.cta",
+    "highlighted": true
+  },
+  {
+    "nameKey": "membership.elite.name",
+    "price": "₹120",
+    "period": "/month",
+    "descriptionKey": "membership.elite.description",
+    "eligibilityKey": "membership.elite.eligibility",
+    "features": [
+      "প্ৰফেচনেল প্লেনৰ সকলো সুবিধা",
+      "ডেডিকেটেড একাউণ্ট মেনেজাৰ",
+      "হোৱাইট-গ্লাভ ব্ৰেণ্ড প্লেচমেণ্ট সেৱা",
+      "কাষ্টম কেম্পেইন ৰণনীতি বিকাশ",
+      "ৰাজহ অপ্টিমাইজেশ্যন পৰামৰ্শ",
+      "কেৱল ভিআইপিৰ বাবে অংশীদাৰিত্বৰ সুযোগ",
+      "মাহেকীয়া লাইভ ৰণনীতি চেচন",
+      "২৪/৭ অগ্ৰাধিকাৰ ভিত্তিত সমৰ্থন",
+      "আইনী আৰু চুক্তি পৰ্যালোচনাৰ সাহায্য"
+    ],
+    "ctaKey": "membership.elite.cta",
+    "highlighted": false
   }
+]
 }
 ,
   "mr":{
@@ -1154,6 +1496,63 @@
     "terms": "अटी",
     "contact": "संपर्क",
     "copyright": "© 2026 C3A प्लॅटफॉर्म. सर्व हक्क राखीव. क्रिएटर इकॉनॉमीला सक्षम बनवत आहोत."
+  },
+  "subPlans": [
+  {
+    "nameKey": "membership.starter.name",
+    "price": "₹10",
+    "period": "/month",
+    "descriptionKey": "membership.starter.description",
+    "eligibilityKey": "membership.starter.eligibility",
+    "features": [
+      "C3A कम्युनिटीमध्ये प्रवेश",
+      "मासिक ब्रँड संधी अलर्ट",
+      "मूलभूत अ‍ॅनालिटिक्स डॅशबोर्ड",
+      "ईमेल सपोर्ट",
+      "पोर्टफोलिओ व्हेरिफिकेशन बॅज"
+    ],
+    "ctaKey": "membership.starter.cta",
+    "highlighted": false
+  },
+  {
+    "nameKey": "membership.professional.name",
+    "price": "₹60",
+    "period": "/month",
+    "descriptionKey": "membership.professional.description",
+    "eligibilityKey": "membership.professional.eligibility",
+    "features": [
+      "स्टार्टर प्लॅनच्या सर्व सुविधा",
+      "प्राधान्य क्रमाने ब्रँड भागीदारी प्रवेश",
+      "प्रगत अ‍ॅनालिटिक्स आणि इनसाइट्स",
+      "वन-ऑन-运行 रणनीती सल्लामसलत (मासिक)",
+      "कंटेंट ऑप्टिमायझेशन टूल्स",
+      "प्राधान्य ईमेल आणि चॅट सपोर्ट",
+      "खास व्यावसायिक नेटवर्क इव्हेंट्स",
+      "करारांसाठी वाटाघाटी (Negotiation) सहाय्य"
+    ],
+    "ctaKey": "membership.professional.cta",
+    "highlighted": true
+  },
+  {
+    "nameKey": "membership.elite.name",
+    "price": "₹120",
+    "period": "/month",
+    "descriptionKey": "membership.elite.description",
+    "eligibilityKey": "membership.elite.eligibility",
+    "features": [
+      "प्रोफेशनल प्लॅनच्या सर्व सुविधा",
+      "समर्पित खाते व्यवस्थापक (Account Manager)",
+      "व्हाईट-ग्लोव्ह ब्रँड प्लेसमेंट सेवा",
+      "कस्टम कॅम्पेन रणनीती विकास",
+      "महसूल (Revenue) ऑप्टिमायझेशन सल्लामसलत",
+      "केवळ व्हीआयपींसाठी भागीदारीच्या संधी",
+      "मासिक लाईव्ह रणनीती सत्रे",
+      "२४/७ प्राधान्य सपोर्ट",
+      "कायदेशीर आणि करार पुनरावलोकन सहाय्य"
+    ],
+    "ctaKey": "membership.elite.cta",
+    "highlighted": false
   }
+]
 }
 }
