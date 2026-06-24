@@ -22,7 +22,7 @@ function Header() {
                         <img
                             src="/favicon.svg"
                             alt="C3A logo"
-                            className="h-11 w-11 md:h-12 md:w-12 rounded-xl object-contain cursor-pointer"
+                            className="h-20 w-16 md:h-28 md:w-24 rounded-xl object-contain cursor-pointer"
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         />
                     </Link>
