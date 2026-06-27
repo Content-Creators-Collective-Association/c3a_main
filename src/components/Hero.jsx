@@ -1,9 +1,34 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { scrollToSection } from '../lib/scrollToSection';
 import { useLanguage } from '../context/LanguageContext';
 
 function Hero() {
     const { t } = useLanguage();
+
+    // Dynamically inject the Curator widget script on mount
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.charset = 'UTF-8';
+        script.src = 'https://cdn.curator.io/published/77738cf3-3445-461f-944c-83a2cc923188.js';
+        
+        // Find the first script element on the page to safely insert before it
+        const firstScript = document.getElementsByTagName('script')[0];
+        if (firstScript && firstScript.parentNode) {
+            firstScript.parentNode.insertBefore(script, firstScript);
+        } else {
+            document.body.appendChild(script);
+        }
+
+        // Clean up the script if the component is unmounted
+        return () => {
+            if (script.parentNode) {
+                script.parentNode.removeChild(script);
+            }
+        };
+    }, []);
 
     const handleSmoothScroll = (e, targetId) => {
         e.preventDefault();
@@ -12,6 +37,13 @@ function Hero() {
 
     return (
         <section className="relative pt-24 pb-32 overflow-hidden">
+            {/* The widget placeholder container */}
+            <div id="curator-feed-default-feed-layout">
+                <a href="https://curator.io" target="_blank" rel="noopener noreferrer" className="crt-logo crt-tag">
+                    C3A Official
+                </a>
+            </div>
+
             <div className="max-w-5xl mx-auto px-6 text-center">
                 <div className="mb-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-blue-50 p-5 md:p-6 text-left shadow-sm">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
