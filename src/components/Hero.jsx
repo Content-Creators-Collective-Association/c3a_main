@@ -35,15 +35,6 @@ function Hero() {
 
     return (
         <section className="relative pt-24 pb-32 overflow-hidden">
-            {/* Outer wrapper to clip off bottom badge */}
-            <div className="relative w-full overflow-hidden pb-10">
-                <div id="curator-feed-default-feed-layout" className="mb-[-50px]">
-                    <a href="https://curator.io" target="_blank" rel="noopener noreferrer" className="crt-logo crt-tag">
-                        C3A Official
-                    </a>
-                </div>
-            </div>
-
             <div className="max-w-5xl mx-auto px-6 text-center">
                 <div className="mb-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 via-white to-blue-50 p-5 md:p-6 text-left shadow-sm">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
