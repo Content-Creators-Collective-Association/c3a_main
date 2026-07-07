@@ -53,14 +53,27 @@ Supabase Form Integration
 
 Approval -> Auth Provisioning Workflow
 1. Apply SQL migration in [supabase/migrations/20260513_creator_approval_auth_workflow.sql](supabase/migrations/20260513_creator_approval_auth_workflow.sql).
-2. Deploy Edge Function from [supabase/functions/approve-creator/index.ts](supabase/functions/approve-creator/index.ts):
+2. Deploy the approval function from [supabase/functions/approve-creator/index.ts](supabase/functions/approve-creator/index.ts):
 	- `supabase functions deploy approve-creator`
-3. Set Edge Function secrets:
+3. Set the function secret:
 	- `SERVICE_ROLE_KEY=<your-service-role-key>`
-	- `AUTH_REDIRECT_URL=https://your-domain.com/auth`
-4. When a creator profile is approved, invoke `approve-creator` with `profileId`.
+4. When you approve a creator profile, call `approve-creator` with `profileId`.
 5. The function will:
-	- set profile status to approved,
-	- create/link Supabase Auth user,
-	- insert row into `authenticated_user`,
-	- send password setup email to the creator.
+	- create or update a Supabase Auth user,
+	- create or update a row in `approved_users`,
+	- mark the profile as approved,
+	- return the generated login password so you can share it securely.
+
+Important
+- A Supabase Auth password cannot be created safely from the browser or SQL alone.
+- If you do not want Edge Functions, you need some trusted backend/server-side code with the service role key.
+- Do not store the plaintext password in a public table; let Supabase Auth own the password and keep only the auth user id in `approved_users`.
+
+Production checklist
+1. In Supabase, run the migration before deploying the function.
+2. Confirm `creator_profiles.email` is populated for every row you might approve.
+3. Deploy the Edge Function only from a trusted environment.
+4. Keep `SERVICE_ROLE_KEY` in Supabase secrets, never in the frontend.
+5. Use the function response password once, then share it through a secure admin channel.
+6. After approval, creators log in with the email/password created by the function and land on the dashboard in the app.
+7. If you need stricter security, replace the generated password flow with a forced password-reset flow handled by your own admin portal, but keep the same `approved_users` table.

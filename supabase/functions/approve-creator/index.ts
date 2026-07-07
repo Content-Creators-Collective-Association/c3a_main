@@ -8,6 +8,7 @@ const corsHeaders = {
 
 type ApprovePayload = {
     profileId?: string;
+    password?: string;
 };
 
 function generateTemporaryPassword(length = 14): string {
@@ -16,7 +17,7 @@ function generateTemporaryPassword(length = 14): string {
     return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('');
 }
 
-Deno.serve(async (req) => {
+Deno.serve(async (req: Request) => {
     if (req.method === 'OPTIONS') {
         return new Response('ok', { headers: corsHeaders });
     }
@@ -44,7 +45,8 @@ Deno.serve(async (req) => {
             auth: { autoRefreshToken: false, persistSession: false }
         });
 
-        const { profileId }: ApprovePayload = await req.json();
+        const payload: ApprovePayload = await req.json();
+        const { profileId, password } = payload;
 
         if (!profileId) {
             return new Response(JSON.stringify({ error: 'profileId is required' }), {
@@ -74,9 +76,11 @@ Deno.serve(async (req) => {
         }
 
         const normalizedEmail = String(profile.email).trim().toLowerCase();
+        const requestedPassword = typeof password === 'string' ? password.trim() : '';
+        const temporaryPassword = requestedPassword || generateTemporaryPassword();
 
         const { data: existingMapping, error: mappingError } = await adminClient
-            .from('authenticated_user')
+            .from('approved_users')
             .select('id, auth_user_id')
             .eq('creator_profile_id', profile.id)
             .maybeSingle();
@@ -86,7 +90,23 @@ Deno.serve(async (req) => {
         }
 
         let authUserId: string | null = existingMapping?.auth_user_id ?? null;
-        const temporaryPassword = generateTemporaryPassword();
+
+        if (profile.approval_status === 'approved' && authUserId) {
+            return new Response(
+                JSON.stringify({
+                    success: true,
+                    alreadyApproved: true,
+                    profileId: profile.id,
+                    authUserId,
+                    email: normalizedEmail,
+                    message: 'Creator is already approved. No changes were made.'
+                }),
+                {
+                    status: 200,
+                    headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+                }
+            );
+        }
 
         if (!authUserId) {
             const { data: createdUser, error: createUserError } = await adminClient.auth.admin.createUser({
@@ -111,7 +131,7 @@ Deno.serve(async (req) => {
                     }
 
                     const matched = usersByEmail.users.find(
-                        (u) => (u.email ?? '').toLowerCase() === normalizedEmail
+                        (user: { email?: string | null; id: string }) => (user.email ?? '').toLowerCase() === normalizedEmail
                     );
 
                     if (!matched) {
@@ -125,6 +145,15 @@ Deno.serve(async (req) => {
             } else {
                 authUserId = createdUser.user?.id ?? null;
             }
+        } else {
+            const { error: updatePasswordError } = await adminClient.auth.admin.updateUserById(authUserId, {
+                password: temporaryPassword,
+                email_confirm: true
+            });
+
+            if (updatePasswordError) {
+                throw updatePasswordError;
+            }
         }
 
         if (!authUserId) {
@@ -133,16 +162,30 @@ Deno.serve(async (req) => {
 
         if (!existingMapping) {
             const { error: insertMappingError } = await adminClient
-                .from('authenticated_user')
+                .from('approved_users')
                 .insert({
                     creator_profile_id: profile.id,
                     auth_user_id: authUserId,
                     email: normalizedEmail,
-                    status: 'active'
+                    status: 'active',
+                    login_issued_at: new Date().toISOString()
                 });
 
             if (insertMappingError) {
                 throw insertMappingError;
+            }
+        } else {
+            const { error: updateMappingError } = await adminClient
+                .from('approved_users')
+                .update({
+                    email: normalizedEmail,
+                    status: 'active',
+                    login_issued_at: new Date().toISOString()
+                })
+                .eq('creator_profile_id', profile.id);
+
+            if (updateMappingError) {
+                throw updateMappingError;
             }
         }
 
@@ -158,22 +201,15 @@ Deno.serve(async (req) => {
             throw updateProfileError;
         }
 
-        // Sends Supabase recovery email so user can securely set their own password.
-        const { error: resetError } = await adminClient.auth.resetPasswordForEmail(normalizedEmail, {
-            redirectTo: Deno.env.get('AUTH_REDIRECT_URL')
-        });
-
-        if (resetError) {
-            throw resetError;
-        }
-
         return new Response(
             JSON.stringify({
                 success: true,
+                alreadyApproved: false,
                 profileId: profile.id,
                 authUserId,
                 email: normalizedEmail,
-                message: 'Creator approved, auth record created, and password setup email sent.'
+                password: temporaryPassword,
+                message: 'Creator approved and login credentials created.'
             }),
             {
                 status: 200,

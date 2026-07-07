@@ -1,15 +1,38 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { isSupabaseConfigured } from '../lib/supabaseClient';
-import { signInCreator, signUpCreator } from '../lib/authService';
+import { getCurrentSession, signInCreator, signUpCreator } from '../lib/authService';
 
 function AuthPage() {
+    const navigate = useNavigate();
     const [authMode, setAuthMode] = useState('signin');
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [status, setStatus] = useState({ type: '', message: '' });
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        let isMounted = true;
+
+        async function checkExistingSession() {
+            const result = await getCurrentSession();
+
+            if (!isMounted || !result.ok) {
+                return;
+            }
+
+            if (result.session) {
+                navigate('/dashboard', { replace: true });
+            }
+        }
+
+        checkExistingSession();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [navigate]);
 
     const title = useMemo(() => {
         return authMode === 'signin' ? 'Welcome Back' : 'Create Your Account';
@@ -45,7 +68,8 @@ function AuthPage() {
             }
 
             if (authMode === 'signin') {
-                setStatus({ type: 'success', message: 'Signed in successfully.' });
+                navigate('/dashboard', { replace: true });
+                return;
             } else {
                 setStatus({
                     type: 'success',

@@ -3,18 +3,19 @@
 
 create extension if not exists pgcrypto;
 
-create table if not exists public.authenticated_user (
+create table if not exists public.approved_users (
     id uuid primary key default gen_random_uuid(),
     creator_profile_id uuid not null unique references public.creator_profiles(id) on delete cascade,
     auth_user_id uuid not null unique references auth.users(id) on delete cascade,
     email text not null unique,
     status text not null default 'active' check (status in ('active', 'disabled')),
+    login_issued_at timestamptz,
     created_at timestamptz not null default now(),
     updated_at timestamptz not null default now()
 );
 
-create index if not exists authenticated_user_email_idx
-    on public.authenticated_user (email);
+create index if not exists approved_users_email_idx
+    on public.approved_users (email);
 
 alter table public.creator_profiles
     add column if not exists approval_status text not null default 'pending'
@@ -32,17 +33,16 @@ begin
 end;
 $$;
 
-drop trigger if exists trg_authenticated_user_set_updated_at on public.authenticated_user;
-create trigger trg_authenticated_user_set_updated_at
-before update on public.authenticated_user
+drop trigger if exists trg_approved_users_set_updated_at on public.approved_users;
+create trigger trg_approved_users_set_updated_at
+before update on public.approved_users
 for each row execute function public.set_updated_at_timestamp();
 
-alter table public.authenticated_user enable row level security;
+alter table public.approved_users enable row level security;
 
--- Restrict direct table reads/writes from anon/authenticated users.
-drop policy if exists authenticated_user_no_access_anon on public.authenticated_user;
-create policy authenticated_user_no_access_anon
-on public.authenticated_user
+drop policy if exists approved_users_no_access_anon on public.approved_users;
+create policy approved_users_no_access_anon
+on public.approved_users
 for all
 to anon, authenticated
 using (false)
