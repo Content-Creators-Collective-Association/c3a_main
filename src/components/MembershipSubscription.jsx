@@ -48,6 +48,7 @@ function MembershipSubscription() {
                                 </div>
 
                                 <button
+                                    onClick={(e) => { e.preventDefault(); alert('Subscription integration coming soon!'); }}
                                     className={`w-full py-3 rounded-xl font-bold transition-all mb-10 ${
                                         plan.highlighted
                                             ? 'bg-blue-600 text-white hover:bg-blue-700'

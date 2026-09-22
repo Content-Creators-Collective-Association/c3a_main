@@ -14,10 +14,10 @@ function Footer() {
                         <h2 className="text-2xl font-extrabold tracking-tight text-charcoal">C3A</h2>
                     </div>
                     <div className="flex flex-wrap justify-center gap-10 text-[10px] font-bold uppercase tracking-widest text-charcoal/50">
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.support')}</a>
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.privacy')}</a>
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.terms')}</a>
-                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#">{t('footer.contact')}</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#" onClick={(e) => { e.preventDefault(); alert('Coming Soon!'); }}>{t('footer.support')}</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#" onClick={(e) => { e.preventDefault(); alert('Coming Soon!'); }}>{t('footer.privacy')}</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#" onClick={(e) => { e.preventDefault(); alert('Coming Soon!'); }}>{t('footer.terms')}</a>
+                        <a className="hover:text-blue-600 transition-colors cursor-pointer" href="#" onClick={(e) => { e.preventDefault(); alert('Coming Soon!'); }}>{t('footer.contact')}</a>
                     </div>
                     <div className="flex gap-4">
                         <a

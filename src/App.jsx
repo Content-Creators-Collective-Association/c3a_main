@@ -13,6 +13,7 @@ import AuthPage from './components/AuthPage';
 import DashboardPage from './components/DashboardPage';
 import CreatorsLab from './components/CreatorsLab';
 import Merchandise from './components/Merchandise';
+import AdminPage from './components/AdminPage';
 import { useLandingPageEffects } from './hooks/useLandingPageEffects';
 
 function LandingPage() {
@@ -46,6 +47,7 @@ function App() {
             <Route path="/merchandise" element={<><Header /><Merchandise /><Footer/></>} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/admin" element={<AdminPage />} />
         </Routes>
     );
 }

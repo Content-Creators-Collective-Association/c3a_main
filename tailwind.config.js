@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                saffron: "#2563EB",
+                saffron: "#FF9933",
                 "india-green": "#138808",
                 sand: "#FFFFFF",
                 charcoal: "#1F2937",
