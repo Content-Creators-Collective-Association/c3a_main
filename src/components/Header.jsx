@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { scrollToSection } from '../lib/scrollToSection';
 import { useLanguage } from '../context/LanguageContext';
 import { useState } from 'react';
@@ -6,10 +6,19 @@ import MobileNav from './MobileNav';
 
 function Header() {
     const { t, changeLanguage, language } = useLanguage();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleSmoothScroll = (e, targetId) => {
         e.preventDefault();
-        scrollToSection(targetId);
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                scrollToSection(targetId);
+            }, 100);
+        } else {
+            scrollToSection(targetId);
+        }
     };
 
     const [showMobile, setShowMobile] = useState(false);
