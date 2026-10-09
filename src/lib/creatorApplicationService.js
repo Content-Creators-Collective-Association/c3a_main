@@ -1,4 +1,4 @@
-import { insertCreatorProfile } from './supabaseClient';
+import { db, collection, addDoc } from './firebaseClient';
 
 export function buildCreatorApplicationPayload(formData, socialPlatforms) {
     const age = Number.parseInt(formData.get('age'), 10);
@@ -24,7 +24,9 @@ export function buildCreatorApplicationPayload(formData, socialPlatforms) {
         ),
         follower_count: Math.max(...socialPlatforms.map((platform) => Number.parseInt(platform.follower_count, 10))),
         content_type: String(formData.get('content_type') || '').trim(),
-        about: String(formData.get('about') || '').trim()
+        about: String(formData.get('about') || '').trim(),
+        status: 'pending',
+        created_at: new Date().toISOString()
     };
 }
 
@@ -60,11 +62,11 @@ export async function submitCreatorApplication(formData, socialPlatforms) {
     }
 
     const payload = buildCreatorApplicationPayload(formData, socialPlatforms);
-    const { error } = await insertCreatorProfile(payload);
-
-    if (error) {
+    
+    try {
+        const docRef = await addDoc(collection(db, 'creator_profiles'), payload);
+        return { ok: true, payload: { id: docRef.id, ...payload } };
+    } catch (error) {
         return { ok: false, error, payload };
     }
-
-    return { ok: true, payload };
 }

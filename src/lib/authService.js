@@ -1,89 +1,66 @@
-import { supabase, isSupabaseConfigured } from './supabaseClient';
+import { auth, db, googleProvider, signInWithPopup, signOut, isFirebaseConfigured, collection, getDocs, query, where } from './firebaseClient';
 
-function ensureSupabaseConfigured() {
-    if (!isSupabaseConfigured || !supabase) {
+function ensureFirebaseConfigured() {
+    if (!isFirebaseConfigured || !auth) {
         return {
             ok: false,
-            error: new Error('Missing Supabase keys. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your environment.')
+            error: new Error('Missing Firebase keys. Add VITE_FIREBASE_API_KEY, VITE_FIREBASE_AUTH_DOMAIN, and VITE_FIREBASE_PROJECT_ID in your environment.')
         };
     }
-
     return { ok: true };
 }
 
-export async function signInCreator(email, password) {
-    const configuration = ensureSupabaseConfigured();
+export async function signInWithGoogle() {
+    const configuration = ensureFirebaseConfigured();
     if (!configuration.ok) {
         return configuration;
     }
 
-    const { error } = await supabase.auth.signInWithPassword({
-        email: email.trim().toLowerCase(),
-        password
-    });
-
-    if (error) {
+    try {
+        const result = await signInWithPopup(auth, googleProvider);
+        return { ok: true, user: result.user };
+    } catch (error) {
         return { ok: false, error };
     }
-
-    return { ok: true };
-}
-
-export async function signUpCreator(email, password, fullName) {
-    const configuration = ensureSupabaseConfigured();
-    if (!configuration.ok) {
-        return configuration;
-    }
-
-    const { error } = await supabase.auth.signUp({
-        email: email.trim().toLowerCase(),
-        password,
-        options: {
-            data: {
-                full_name: fullName.trim()
-            }
-        }
-    });
-
-    if (error) {
-        return { ok: false, error };
-    }
-
-    return { ok: true };
 }
 
 export async function getCurrentSession() {
-    const configuration = ensureSupabaseConfigured();
+    const configuration = ensureFirebaseConfigured();
     if (!configuration.ok) {
         return configuration;
     }
 
-    const { data, error } = await supabase.auth.getSession();
-
-    if (error) {
-        return { ok: false, error };
-    }
-
-    return { ok: true, session: data.session };
+    // Since firebase doesn't strictly have an async "getSession" that doesn't use onAuthStateChanged,
+    // we return the currentUser if it exists. Note: auth.currentUser might be null immediately on load.
+    // In a real app we'd wait for auth state to initialize, but for this demo:
+    return new Promise((resolve) => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            unsubscribe();
+            if (user) {
+                resolve({ ok: true, session: { user: { email: user.email, ...user } } });
+            } else {
+                resolve({ ok: true, session: null });
+            }
+        });
+    });
 }
 
 export async function signOutCreator() {
-    const configuration = ensureSupabaseConfigured();
+    const configuration = ensureFirebaseConfigured();
     if (!configuration.ok) {
         return configuration;
     }
 
-    const { error } = await supabase.auth.signOut();
-
-    if (error) {
+    try {
+        await signOut(auth);
+        return { ok: true };
+    } catch (error) {
         return { ok: false, error };
     }
-
-    return { ok: true };
 }
 
 export async function getCreatorProfileByEmail(email) {
-    const configuration = ensureSupabaseConfigured();
+    const configuration = ensureFirebaseConfigured();
     if (!configuration.ok) {
         return configuration;
     }
@@ -97,15 +74,18 @@ export async function getCreatorProfileByEmail(email) {
         };
     }
 
-    const { data, error } = await supabase
-        .from('creator_profiles')
-        .select('*')
-        .eq('email', normalizedEmail)
-        .maybeSingle();
-
-    if (error) {
+    try {
+        const q = query(collection(db, 'creator_profiles'), where('email', '==', normalizedEmail));
+        const querySnapshot = await getDocs(q);
+        
+        if (querySnapshot.empty) {
+            // Return null profile if not found, instead of an error, or just return empty
+            return { ok: true, profile: null };
+        }
+        
+        // Return the first match
+        return { ok: true, profile: { id: querySnapshot.docs[0].id, ...querySnapshot.docs[0].data() } };
+    } catch (error) {
         return { ok: false, error };
     }
-
-    return { ok: true, profile: data };
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { getAdminStatistics } from '../lib/supabaseClient';
+import { getAdminStatistics, updateAdminApplicationStatus } from '../lib/firebaseClient';
 import { 
     LayoutDashboard, Users, FileText, Settings, 
     Search, Filter, CheckCircle2, XCircle, ChevronRight, 
@@ -66,8 +66,13 @@ function AdminPage() {
     }, [applications, searchQuery, statusFilter]);
 
     // Actions
-    const updateStatus = (id, newStatus) => {
-        setApplications(prev => prev.map(app => app.id === id ? { ...app, status: newStatus } : app));
+    const updateStatus = async (id, newStatus) => {
+        const result = await updateAdminApplicationStatus(id, newStatus);
+        if (result.ok) {
+            setApplications(prev => prev.map(app => app.id === id ? { ...app, status: newStatus } : app));
+        } else {
+            alert('Failed to update status: ' + result.error.message);
+        }
         setSelectedApp(null); // Close modal if open
     };
 
